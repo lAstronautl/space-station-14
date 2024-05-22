@@ -199,22 +199,22 @@ entities:
             color: '#C977BF93'
             id: BrickCornerOverlayNE
           decals:
-            321: 31,18
+            307: 31,18
         - node:
             color: '#FFFFFFFF'
             id: BrickCornerOverlayNE
           decals:
-            318: 31,18
+            304: 31,18
         - node:
             color: '#C977BF93'
             id: BrickCornerOverlayNW
           decals:
-            320: 30,18
+            306: 30,18
         - node:
             color: '#FFFFFFFF'
             id: BrickCornerOverlayNW
           decals:
-            319: 30,18
+            305: 30,18
         - node:
             color: '#A4610696'
             id: BrickCornerOverlaySE
@@ -224,22 +224,22 @@ entities:
             color: '#C977BF93'
             id: BrickCornerOverlaySE
           decals:
-            322: 31,15
+            308: 31,15
         - node:
             color: '#FFFFFFFF'
             id: BrickCornerOverlaySE
           decals:
-            312: 31,15
+            302: 31,15
         - node:
             color: '#C977BF93'
             id: BrickCornerOverlaySW
           decals:
-            325: 30,15
+            311: 30,15
         - node:
             color: '#FFFFFFFF'
             id: BrickCornerOverlaySW
           decals:
-            313: 30,15
+            303: 30,15
         - node:
             color: '#A4610696'
             id: BrickLineOverlayE
@@ -249,26 +249,26 @@ entities:
             color: '#C977BF93'
             id: BrickLineOverlayE
           decals:
-            326: 31,16
-            327: 31,17
+            312: 31,16
+            313: 31,17
         - node:
             color: '#FFFFFFFF'
             id: BrickLineOverlayE
           decals:
-            309: 31,16
-            310: 31,17
+            300: 31,16
+            301: 31,17
         - node:
             color: '#C977BF93'
             id: BrickLineOverlayW
           decals:
-            323: 30,17
-            324: 30,16
+            309: 30,17
+            310: 30,16
         - node:
             color: '#FFFFFFFF'
             id: BrickLineOverlayW
           decals:
-            307: 30,17
-            308: 30,16
+            298: 30,17
+            299: 30,16
         - node:
             color: '#FFFFFFFF'
             id: Delivery
@@ -908,12 +908,12 @@ entities:
             253: -32,30
             254: -32,31
             255: -32,32
-            300: -42,24
-            301: -42,25
-            302: -42,26
-            303: -42,27
-            304: -42,28
-            305: -42,23
+            292: -42,24
+            293: -42,25
+            294: -42,26
+            295: -42,27
+            296: -42,28
+            297: -42,23
         - node:
             color: '#FFFFFFFF'
             id: WarnLineW
@@ -2475,7 +2475,7 @@ entities:
       pos: 25.5,21.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -93295.87
+      secondsUntilStateChange: -93388.13
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -2710,7 +2710,7 @@ entities:
       pos: 42.5,14.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -29604.297
+      secondsUntilStateChange: -29696.564
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -2946,6 +2946,9 @@ entities:
     - type: Transform
       pos: -33.5,23.5
       parent: 2
+    - type: DeviceNetwork
+      deviceLists:
+      - 2715
   - uid: 201
     components:
     - type: Transform
@@ -13286,25 +13289,6 @@ entities:
           - 2148
           - 2149
           - 2150
-    - type: GroupExamine
-      group:
-      - hoverMessage: ""
-        contextText: verb-examine-group-other
-        icon: /Textures/Interface/examine-star.png
-        components:
-        - Armor
-        - ClothingSpeedModifier
-        entries:
-        - message: >-
-            Обеспечивает следующую защиту:
-
-            - [color=orange]Взрывчатый[/color] урон [color=white]для содержимого[/color] снижен на [color=lightblue]10%[/color].
-          priority: 0
-          component: Armor
-        - message: Понижает Вашу скорость бега на [color=yellow]10%[/color].
-          priority: 0
-          component: ClothingSpeedModifier
-        title: null
   - uid: 2159
     components:
     - type: MetaData
@@ -13353,22 +13337,6 @@ entities:
       parent: 2160
     - type: Physics
       canCollide: False
-    - type: GroupExamine
-      group:
-      - hoverMessage: ""
-        contextText: verb-examine-group-other
-        icon: /Textures/Interface/examine-star.png
-        components:
-        - Armor
-        - ClothingSpeedModifier
-        entries:
-        - message: >-
-            Обеспечивает следующую защиту:
-
-            - [color=orange]Взрывчатый[/color] урон [color=white]для содержимого[/color] снижен на [color=lightblue]10%[/color].
-          priority: 0
-          component: Armor
-        title: null
     - type: InsideEntityStorage
 - proto: ClothingBackpackSatchelClown
   entities:
@@ -13390,22 +13358,6 @@ entities:
           - 1177
     - type: Physics
       canCollide: False
-    - type: GroupExamine
-      group:
-      - hoverMessage: ""
-        contextText: verb-examine-group-other
-        icon: /Textures/Interface/examine-star.png
-        components:
-        - Armor
-        - ClothingSpeedModifier
-        entries:
-        - message: >-
-            Обеспечивает следующую защиту:
-
-            - [color=orange]Взрывчатый[/color] урон [color=white]для содержимого[/color] снижен на [color=lightblue]10%[/color].
-          priority: 0
-          component: Armor
-        title: null
     - type: InsideEntityStorage
 - proto: ClothingBeltPlantFilled
   entities:
@@ -13687,35 +13639,6 @@ entities:
     components:
     - type: Transform
       parent: 2202
-    - type: GroupExamine
-      group:
-      - hoverMessage: ""
-        contextText: verb-examine-group-other
-        icon: /Textures/Interface/examine-star.png
-        components:
-        - Armor
-        - ClothingSpeedModifier
-        entries:
-        - message: Понижает Вашу скорость на [color=yellow]25%[/color].
-          priority: 0
-          component: ClothingSpeedModifier
-        - message: >-
-            Обеспечивает следующую защиту:
-
-            - [color=yellow]Тупой[/color] урон снижается на [color=lightblue]40%[/color].
-
-            - [color=yellow]Рубящий[/color] урон снижается на [color=lightblue]40%[/color].
-
-            - [color=yellow]Колющий[/color] урон снижается на [color=lightblue]40%[/color].
-
-            - [color=yellow]Тепловой[/color] урон снижается на [color=lightblue]25%[/color].
-
-            - [color=yellow]Разъедающий[/color] урон снижается на [color=lightblue]30%[/color].
-
-            - [color=orange]Взрывчатый[/color] урон снижен на [color=lightblue]60%[/color].
-          priority: 0
-          component: Armor
-        title: null
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
@@ -17431,8 +17354,6 @@ entities:
       pos: -31.5,20.5
       parent: 2
     - type: DeviceList
-      configurators:
-      - invalid
       devices:
       - 2804
       - 2803
@@ -17442,6 +17363,7 @@ entities:
       - 2791
       - 2787
       - 2788
+      - 200
   - uid: 2716
     components:
     - type: Transform
