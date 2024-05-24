@@ -1,23 +1,47 @@
 {
   "version": 1,
   "license": "CC-BY-SA-3.0",
-  "copyright": "Taken from shiptest at commmit https://github.com/shiptest-ss13/Shiptest/commit/440a15fb476a20d77ba28c1fe315c1b659032ce8, edited by Alekshhh",
+  "copyright": "Taken from tgstation at commit https://github.com/tgstation/tgstation/commit/d917f4c2a088419d5c3aec7656b7ff8cebd1822e idcluwne made by brainfood1183 (github) for ss14, idbrigmedic made by PuroSlavKing (Github), pirate made by brainfood1183 (github)",
   "size": {
     "x": 32,
     "y": 32
   },
   "states": [
-    { "name": "icon" },
-    { "name": "icon_open" },
-    { "name": "icon_apple" },
-    { "name": "icon_banan" },
-    { "name": "icon_berry" },
-    { "name": "icon_carrot" },
-    { "name": "icon_catdespair" },
-    { "name": "icon_lemon" },
-    { "name": "icon_mole" },
-    { "name": "icon_pineapple" },
-    { "name": "icon_syndi" },
-    { "name": "icon_unati" }
+    {
+      "name": "icon"
+    },
+    {
+      "name": "icon_open"
+    },
+    {
+      "name": "icon_apple"
+    },
+    {
+      "name": "icon_banan"
+    },
+    {
+      "name": "icon_berry"
+    },
+    {
+      "name": "icon_carrot"
+    },
+    {
+      "name": "icon_catdespair"
+    },
+    {
+      "name": "icon_lemon"
+    },
+    {
+      "name": "icon_mole"
+    },
+    {
+      "name": "icon_pineapple"
+    },
+    {
+      "name": "icon_syndi"
+    },
+    {
+      "name": "icon_unati"
+    }
   ]
 }

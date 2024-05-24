@@ -356,7 +356,11 @@
         - ReagentId: JuiceOrange
           Quantity: 50
   - type: Sprite
-    sprite: Objects/Consumable/Drinks/molejuice.rsi
+    sprite: Objects\Consumable\Drinks\cardboardjuiceboxes.rsi
+    layers:
+      - state: icon
+        map: ["enum.OpenableVisuals.Layer"]
+      - state: icon_mole
   - type: Label
     originalName: mole juice
     currentLabel: сделано на 99,99 изз Бззз!
