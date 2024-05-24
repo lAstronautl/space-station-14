@@ -66,10 +66,6 @@
         enum.OpenableVisuals.Layer:
           True: {state: "icon_open"}
           False: {state: "icon"}
-  - type: Sprite
-    layers:
-      - state: icon
-        map: ["enum.OpenableVisuals.Layer"]
 
 - type: entity
   parent: [DrinkCartonVisualsOpenable, DrinkCartonBaseFull]
@@ -99,7 +95,14 @@
         - ReagentId: JuiceOrange
           Quantity: 50
   - type: Sprite
-    sprite: Objects/Consumable/Drinks/orangejuice.rsi
+    sprite: Objects/Consumable/Drinks/cardboardjuiceboxes.rsi
+    layers:
+      - state: icon
+        map: ["enum.OpenableVisuals.Layer"]
+      - state: icon_orange
+  - type: Label
+    originalName: апельсиновый сок
+    currentLabel: Полно витаминов!
 
 - type: entity
   parent: [DrinkCartonVisualsOpenable, DrinkCartonBaseFull]
@@ -207,7 +210,11 @@
         - ReagentId: JuiceApple
           Quantity: 50
   - type: Sprite
-    sprite: Objects/Consumable/Drinks/applejuice.rsi
+    sprite: Objects/Consumable/Drinks/cardboardjuiceboxes.rsi
+    layers:
+      - state: icon
+        map: ["enum.OpenableVisuals.Layer"]
+      - state: icon_apple
   - type: Label
     originalName: яблочный сок
     currentLabel: Яблочный сок полон сахара и вкуса! Сделан из спелых и сочных яблок!
@@ -225,7 +232,11 @@
         - ReagentId: JuiceCarrot
           Quantity: 50
   - type: Sprite
-    sprite: Objects/Consumable/Drinks/carrotjuicecarton.rsi
+    sprite: Objects/Consumable/Drinks/cardboardjuiceboxes.rsi
+    layers:
+      - state: icon
+        map: ["enum.OpenableVisuals.Layer"]
+      - state: icon_carrot
   - type: Label
     originalName: морковный сок
     currentLabel: здесь могла бы быть ваша реклама
@@ -243,7 +254,11 @@
         - ReagentId: JuiceBerry
           Quantity: 50
   - type: Sprite
-    sprite: Objects/Consumable/Drinks/berryjuicecarton.rsi
+    sprite: Objects/Consumable/Drinks/cardboardjuiceboxes.rsi
+    layers:
+      - state: icon
+        map: ["enum.OpenableVisuals.Layer"]
+      - state: icon_berry
   - type: Label
     originalName: ягодный сок
     currentLabel: Освежающий аромат и вкус, с нотками дикой природы
@@ -261,7 +276,11 @@
         - ReagentId: JuiceBanana
           Quantity: 50
   - type: Sprite
-    sprite: Objects/Consumable/Drinks/bananajuice.rsi
+    sprite: Objects/Consumable/Drinks/cardboardjuiceboxes.rsi
+    layers:
+      - state: icon
+        map: ["enum.OpenableVisuals.Layer"]
+      - state: icon_banan
   - type: Label
     originalName: банановый сок
     currentLabel: Состоит из 75% бананов, 24% робуста, 1% бананиума
@@ -279,7 +298,11 @@
         - ReagentId: JuicePineapple
           Quantity: 50
   - type: Sprite
-    sprite: Objects/Consumable/Drinks/ananasjuice.rsi
+    sprite: Objects/Consumable/Drinks/cardboardjuiceboxes.rsi
+    layers:
+      - state: icon
+        map: ["enum.OpenableVisuals.Layer"]
+      - state: icon_pineapple
   - type: Label
     originalName: ананасовый сок
     currentLabel: Освежающий и бодрящий продукт! В составе более 90% спелых и вкуснейших ананасов! Без добавления консервантов
@@ -300,9 +323,12 @@
           Quantity: 25
         - ReagentId: Tricordrazine
           Quantity: 20
-
   - type: Sprite
-    sprite: Objects/Consumable/Drinks/syndicatejuice.rsi
+    sprite: Objects/Consumable/Drinks/cardboardjuiceboxes.rsi
+    layers:
+      - state: icon
+        map: ["enum.OpenableVisuals.Layer"]
+      - state: icon_syndi
   - type: Label
     originalName: cинди сок
     currentLabel: зделано на заказ компанией "Еnergy DOOM™"
@@ -320,7 +346,11 @@
         - ReagentId: JuiceThatMakesYouWeh
           Quantity: 50
   - type: Sprite
-    sprite: Objects/Consumable/Drinks/unatijuice.rsi
+    sprite: Objects/Consumable/Drinks/cardboardjuiceboxes.rsi
+    layers:
+      - state: icon
+        map: ["enum.OpenableVisuals.Layer"]
+      - state: icon_unati
   - type: Label
     originalName: унати сcок
     currentLabel: Сссделан на 99% исс вех! (не сспрашшивайте как)
@@ -338,15 +368,41 @@
         - ReagentId: MuteToxin
           Quantity: 50
   - type: Sprite
-    sprite: Objects/Consumable/Drinks/catdespairjuice.rsi
+    sprite: Objects/Consumable/Drinks/cardboardjuiceboxes.rsi
+    layers:
+      - state: icon
+        map: ["enum.OpenableVisuals.Layer"]
+      - state: icon_catdespair
   - type: Label
     originalName: cat despair juice
     currentLabel: Зделано из 50% кота и 50% тёмной глубокой бездны
 
 - type: entity
   parent: [DrinkCartonVisualsOpenable, DrinkCartonBaseFull]
-  id: DrinkMoleCatDespairCarton
+  id: DrinkJuiceMoleCarton
   name: mole juice
+  description: Full of vitamins and deliciousness!
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        reagents:
+        - ReagentId: JuiceThatMakesYouBuzz
+          Quantity: 50
+  - type: Sprite
+    sprite: Objects/Consumable/Drinks/cardboardjuiceboxes.rsi
+    layers:
+      - state: icon
+        map: ["enum.OpenableVisuals.Layer"]
+      - state: icon_mole
+  - type: Label
+    originalName: мофф сок
+    currentLabel: сделано на 99,99 изз Бззз!
+
+- type: entity
+  parent: [DrinkCartonVisualsOpenable, DrinkCartonBaseFull]
+  id: DrinkJuicelemonCarton
+  name: lemon juice
   description: Full of vitamins and deliciousness!
   components:
   - type: SolutionContainerManager
@@ -356,12 +412,13 @@
         - ReagentId: JuiceOrange
           Quantity: 50
   - type: Sprite
-    sprite: Objects\Consumable\Drinks\cardboardjuiceboxes.rsi
+    sprite: Objects/Consumable/Drinks/cardboardjuiceboxes.rsi
     layers:
       - state: icon
         map: ["enum.OpenableVisuals.Layer"]
-      - state: icon_mole
+      - state: icon_lemon
   - type: Label
-    originalName: mole juice
-    currentLabel: сделано на 99,99 изз Бззз!
+    originalName: лимонный сок
+    currentLabel: ОПАСНО! может прожечь язык
+
 
