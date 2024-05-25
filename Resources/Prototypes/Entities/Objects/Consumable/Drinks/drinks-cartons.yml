@@ -409,7 +409,7 @@
     solutions:
       drink:
         reagents:
-        - ReagentId: JuiceOrange
+        - ReagentId: JuiceLemon
           Quantity: 50
   - type: Sprite
     sprite: Objects/Consumable/Drinks/cardboardjuiceboxes.rsi
@@ -419,6 +419,56 @@
       - state: icon_lemon
   - type: Label
     originalName: лимонный сок
-    currentLabel: ОПАСНО! может прожечь язык
+    currentLabel: ОПАСНО! Может прожечь язык!
+
+- type: entity
+  parent: [DrinkCartonVisualsOpenable, DrinkCartonBaseFull]
+  id: DrinkJuiceWatermelonCarton
+  name: watermelon juice
+  description: Full of vitamins and deliciousness!
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        reagents:
+        - ReagentId: JuiceWatermelon
+          Quantity: 50
+  - type: Sprite
+    sprite: Objects/Consumable/Drinks/cardboardjuiceboxes.rsi
+    layers:
+      - state: icon
+        map: ["enum.OpenableVisuals.Layer"]
+      - state: icon_watermelon
+  - type: Label
+    originalName: арбузный сок
+    currentLabel: На этикетке изображена на вид сладкая, спелая и красная долька арбуза
+
+- type: entity
+  parent: [DrinkCartonVisualsOpenable, DrinkCartonBaseFull]
+  id: DrinkJuiceCbCarton
+  name: cb juice
+  description: Full of vitamins and deliciousness!
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        reagents:
+        - ReagentId: Bicaridine
+          Quantity: 3
+        - ReagentId: Tricordrazine
+          Quantity: 7
+        - ReagentId: Nutriment
+          Quantity: 20
+        - ReagentId: Saline
+          Quantity: 20
+  - type: Sprite
+    sprite: Objects/Consumable/Drinks/cardboardjuiceboxes.rsi
+    layers:
+      - state: icon
+        map: ["enum.OpenableVisuals.Layer"]
+      - state: icon_SB
+  - type: Label
+    originalName: сок службы безопасности
+    currentLabel: Самый безопасный сок во вселеной!
 
 

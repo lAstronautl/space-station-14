@@ -1,4 +1,4 @@
-flavor-profile = На вкус { $flavor }.
+﻿flavor-profile = На вкус { $flavor }.
 flavor-profile-multiple = На вкус { $flavors } и { $lastFlavor }.
 flavor-profile-unknown = Вкус неописуем.
 
@@ -274,3 +274,4 @@ flavor-complex-sax = как джаз
 flavor-complex-bottledlightning = как молния в бутылке
 flavor-complex-punishment = как наказание
 flavor-weh = как вех
+flavor-buzz = как бззз

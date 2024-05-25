@@ -1,4 +1,4 @@
-## Plushies
+﻿## Plushies
 
 - type: entity
   parent: BaseItem
@@ -773,6 +773,20 @@
     requiresSpecialDigestion: true
     useSound:
       path: /Audio/Voice/Moth/moth_scream.ogg
+  - type: Extractable
+    juiceSolution:
+      reagents:
+      - ReagentId: JuiceThatMakesYouBuzz
+        Quantity: 30
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 20
+        reagents:
+        - ReagentId: Fiber
+          Quantity: 10
+        - ReagentId: JuiceThatMakesYouBuzz
+          Quantity: 10
 
 ## Cheapo Figurines
 

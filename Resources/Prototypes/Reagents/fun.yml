@@ -365,14 +365,6 @@
         emote: Buzz
         showInChat: true
         probability: 0.5
-      - !type:Polymorph
-        prototype: ArtifactLizard
-        conditions:
-        - !type:OrganType
-          type: Animal
-          shouldHave: false
-        - !type:ReagentThreshold
-          min: 50
       - !type:AdjustReagent
         reagent: JuiceThatMakesYouBuzz
         amount: -20
