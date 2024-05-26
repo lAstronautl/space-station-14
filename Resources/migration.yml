@@ -296,6 +296,9 @@ DrinkBottleGoldschlager: DrinkBottleGildlager
 soda_dispenser: SodaDispenser
 chem_master: ChemMaster
 
+# 2024-05-21
+CrateJanitorExplosive: ClosetJanitorBombFilled
+
 ## Starshine
 
 # 07-09-2023 Starshine
