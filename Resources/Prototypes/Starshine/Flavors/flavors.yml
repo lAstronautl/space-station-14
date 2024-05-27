@@ -1,0 +1,4 @@
+- type: flavor
+  id: buzz
+  flavorType: Base
+  description: flavor-buzz
