@@ -45,15 +45,18 @@
     DrinkSakeBottleFull: 3
     DrinkBeerCan: 5
     DrinkWineCan: 5
+# Starshine-start
     DrinkJuiceAppleCarton: 3
     DrinkJuiceCarrotCarton: 3
     DrinkJuiceBerryCarton: 3
     DrinkJuiceBananaCarton: 3
     DrinkJuicePineappleCarton: 3
-    DrinkJuicelemonCarton: 3
+    DrinkJuiceLemonCarton: 3
     DrinkJuiceWatermelonCarton: 3
-    DrinkJuiceUnatieCarton: 1
-    DrinkJuiceMoleCarton: 1
+    DrinkJuiceWehCarton: 1
+    DrinkJuiceMoffCarton: 1
+    DrinkJuiceSecCarton: 1
+# Starshine-end
   emaggedInventory:
     DrinkPoisonWinebottleFull: 2
     DrinkJuiceSyndicateCarton: 1

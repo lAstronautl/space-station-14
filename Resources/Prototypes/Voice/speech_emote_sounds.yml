@@ -34,6 +34,8 @@
       collection: Whistles
     Weh:
       collection: Weh
+    Buzzing:
+      path: /Audio/Voice/Moth/moth_scream.ogg
 
 - type: emoteSounds
   id: FemaleHuman
@@ -70,6 +72,8 @@
       collection: Whistles
     Weh:
       collection: Weh
+    Buzzing:
+      path: /Audio/Voice/Moth/moth_scream.ogg
 
 - type: emoteSounds
   id: MaleReptilian
@@ -88,6 +92,8 @@
       collection: MaleCry
     Weh:
       collection: Weh
+    Buzzing:
+      path: /Audio/Voice/Moth/moth_scream.ogg
 
 - type: emoteSounds
   id: FemaleReptilian
@@ -106,6 +112,8 @@
       collection: FemaleCry
     Weh:
       collection: Weh
+    Buzzing:
+      path: /Audio/Voice/Moth/moth_scream.ogg
 
 - type: emoteSounds
   id: MaleSlime
@@ -142,6 +150,8 @@
       collection: Whistles
     Weh:
       collection: Weh
+    Buzzing:
+      path: /Audio/Voice/Moth/moth_scream.ogg
   params:
     variation: 0.125
 
@@ -180,6 +190,8 @@
       collection: Whistles
     Weh:
       collection: Weh
+    Buzzing:
+      path: /Audio/Voice/Moth/moth_scream.ogg
   params:
     variation: 0.125
 
@@ -205,6 +217,8 @@
       collection: BikeHorn
     Weh:
       collection: Weh
+    Buzzing:
+      path: /Audio/Voice/Moth/moth_scream.ogg
   params:
     variation: 0.125
 
@@ -223,6 +237,8 @@
       path: /Audio/Voice/Arachnid/arachnid_click.ogg
     Weh:
       collection: Weh
+    Buzzing:
+      path: /Audio/Voice/Moth/moth_scream.ogg
 
 - type: emoteSounds
   id: UnisexDwarf
@@ -257,6 +273,8 @@
       collection: Whistles
     Weh:
       collection: Weh
+    Buzzing:
+      path: /Audio/Voice/Moth/moth_scream.ogg
   params:
     variation: 0.125
     pitch: 0.75
@@ -294,6 +312,8 @@
       collection: Whistles
     Weh:
       collection: Weh
+    Buzzing:
+      path: /Audio/Voice/Moth/moth_scream.ogg
   params:
     variation: 0.125
     pitch: 0.75
@@ -315,6 +335,8 @@
       path: /Audio/Voice/Moth/moth_squeak.ogg
     Weh:
       collection: Weh
+    Buzzing:
+      path: /Audio/Voice/Moth/moth_scream.ogg
 
 - type: emoteSounds
   id: UnisexSilicon

@@ -1,0 +1,6 @@
+- type: emote
+  id: Buzzing
+  name: chat-emote-name-buzz
+  category: Vocal
+  icon: Interface/Emotes/buzz.png
+  chatMessages: [chat-emote-msg-buzz]

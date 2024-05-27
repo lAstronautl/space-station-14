@@ -1,0 +1,238 @@
+﻿- type: entity
+  parent: [DrinkCartonVisualsOpenable, DrinkCartonBaseFull]
+  id: DrinkJuiceCartonBase
+  name: apple juice
+  description: Juice release 3023, fresh acid-pressed, with added apple seed extract and donk flavours.
+  abstract: true
+  components:
+  - type: Sprite
+    sprite: Starshine/Objects/Consumable/Drinks/cardboardjuiceboxes.rsi
+
+- type: entity
+  parent: DrinkJuiceCartonBase
+  id: DrinkJuiceAppleCarton
+  name: apple juice
+  description: Juice release 3023, fresh acid-pressed, with added apple seed extract and donk flavours.
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        reagents:
+        - ReagentId: JuiceApple
+          Quantity: 50
+  - type: Sprite
+    layers:
+      - state: icon
+        map: ["enum.OpenableVisuals.Layer"]
+      - state: label-apple
+  - type: Label
+    currentLabel: Яблочный сок полон сахара и вкуса! Сделан из спелых и сочных яблок!
+
+- type: entity
+  parent: DrinkJuiceCartonBase
+  id: DrinkJuiceCarrotCarton
+  name: carrot juice
+  description: Rich in vitamin A and has an unusual flavour. People working at terminals are their main customers.
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        reagents:
+        - ReagentId: JuiceCarrot
+          Quantity: 50
+  - type: Sprite
+    layers:
+      - state: icon
+        map: ["enum.OpenableVisuals.Layer"]
+      - state: label-carrot
+
+- type: entity
+  parent: DrinkJuiceCartonBase
+  id: DrinkJuiceBerryCarton
+  name: berry juice
+  description: A favourite juice of the sweet tooth, what a pity that its production has fallen off due to the decreasing number of consumers in NT stations. However, it is said that a special ingredient allows them to stay in the market and sell more than half of the product to unknown sectors.
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        reagents:
+        - ReagentId: JuiceBerry
+          Quantity: 50
+  - type: Sprite
+    layers:
+      - state: icon
+        map: ["enum.OpenableVisuals.Layer"]
+      - state: label-berry
+
+- type: entity
+  parent: DrinkJuiceCartonBase
+  id: DrinkJuiceBananaCarton
+  name: banana juice
+  description: Taste the flavour of banana juice! Become a clown! Become robust!
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        reagents:
+        - ReagentId: JuiceBanana
+          Quantity: 50
+  - type: Sprite
+    layers:
+      - state: icon
+        map: ["enum.OpenableVisuals.Layer"]
+      - state: label-banana
+
+- type: entity
+  parent: DrinkJuiceCartonBase
+  id: DrinkJuicePineappleCarton
+  name: pineapple juice
+  description: This is a refreshing drink that has a bright and fresh flavour. Each drop of this juice is like a small star, bringing joy and pleasure after a hard day's work in outer space. Its flavour fills the station's offices with notes of tropical fruits, creating an atmosphere of coziness and comfort even in the conditions of distant space.
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        reagents:
+        - ReagentId: JuicePineapple
+          Quantity: 50
+  - type: Sprite
+    layers:
+      - state: icon
+        map: ["enum.OpenableVisuals.Layer"]
+      - state: label-pineapple
+
+- type: entity
+  parent: DrinkJuiceCartonBase
+  id: DrinkJuiceSyndicateCarton
+  name: syndicate juice
+  description: Space Weapon Juice is a drink that will become the secret weapon of every syndicate agent. Its bright flavour combines with notes of exotic spices to create an explosive taste experience that can energise you for the most challenging missions. Every drop of this juice is a charge of adrenaline, ready to inspire feats and victories.
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        reagents:
+        - ReagentId: Stimulants
+          Quantity: 5
+        - ReagentId: DoctorsDelight
+          Quantity: 25
+        - ReagentId: Tricordrazine
+          Quantity: 20
+  - type: Sprite
+    layers:
+      - state: icon
+        map: ["enum.OpenableVisuals.Layer"]
+      - state: label-syndi
+
+- type: entity
+  parent: DrinkJuiceCartonBase
+  id: DrinkJuiceWehCarton
+  name: weh juice
+  description: For Lizards 3 years and older!
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        reagents:
+        - ReagentId: JuiceThatMakesYouWeh
+          Quantity: 50
+  - type: Sprite
+    layers:
+      - state: icon
+        map: ["enum.OpenableVisuals.Layer"]
+      - state: label-weh
+
+- type: entity
+  parent: DrinkJuiceCartonBase
+  id: DrinkJuiceCatDespairCarton
+  name: cat despair juice
+  description: The more you gaze into the juice, the more you want to close that examine window. Wait, examine window?
+  suffix: DO NOT MAP, Admeme
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        reagents:
+        - ReagentId: MuteToxin
+          Quantity: 50
+  - type: Sprite
+    layers:
+      - state: icon
+        map: ["enum.OpenableVisuals.Layer"]
+      - state: label-catdespair
+
+- type: entity
+  parent: DrinkJuiceCartonBase
+  id: DrinkJuiceMoffCarton
+  name: moff juice
+  description: Recommended by all moffs. Bzzzz!
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        reagents:
+        - ReagentId: JuiceThatMakesYouBuzz
+          Quantity: 50
+  - type: Sprite
+    layers:
+      - state: icon
+        map: ["enum.OpenableVisuals.Layer"]
+      - state: label-moff
+
+- type: entity
+  parent: DrinkJuiceCartonBase
+  id: DrinkJuiceLemonCarton
+  name: lemon juice
+  description: This is a drink that not only refreshes you, but also transports you to the amazing reaches of space. Its bright yellow colour reminds you of sunlight, while the freshness of lemon adds notes of acidity and energy.
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        reagents:
+        - ReagentId: JuiceLemon
+          Quantity: 50
+  - type: Sprite
+    layers:
+      - state: icon
+        map: ["enum.OpenableVisuals.Layer"]
+      - state: label-lemon
+
+- type: entity
+  parent: DrinkJuiceCartonBase
+  id: DrinkJuiceWatermelonCarton
+  name: watermelon juice
+  description: This is an amazing drink that combines the sweetness of ripe watermelon and the mysterious energy of the cosmos. Its bright red colour reminds of the beauty of the red planets, and the sweet taste of watermelon gives a feeling of summer sunshine and freshness.
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        reagents:
+        - ReagentId: JuiceWatermelon
+          Quantity: 50
+  - type: Sprite
+    layers:
+      - state: icon
+        map: ["enum.OpenableVisuals.Layer"]
+      - state: label-watermelon
+
+- type: entity
+  parent: DrinkJuiceCartonBase
+  id: DrinkJuiceSecCarton
+  name: sec juice
+  description: This is a refreshing and invigorating juice specially formulated for security and safety services. The unique combination of natural ingredients helps maintain high levels of alertness and energy throughout the day.
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        reagents:
+        - ReagentId: Bicaridine
+          Quantity: 3
+        - ReagentId: Tricordrazine
+          Quantity: 7
+        - ReagentId: Nutriment
+          Quantity: 20
+        - ReagentId: Saline
+          Quantity: 20
+  - type: Sprite
+    layers:
+      - state: icon
+        map: ["enum.OpenableVisuals.Layer"]
+      - state: label-sec
