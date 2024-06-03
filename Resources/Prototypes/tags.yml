@@ -281,6 +281,9 @@
 
 - type: Tag
   id: CableCoil
+  
+- type: Tag
+  id: Candle
 
 - type: Tag
   id: Cake

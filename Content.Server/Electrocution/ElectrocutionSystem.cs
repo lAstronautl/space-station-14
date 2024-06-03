@@ -167,12 +167,10 @@ public sealed class ElectrocutionSystem : SharedElectrocutionSystem
         if (!electrified.OnAttacked ||
             !_random.Prob(electrified.Probability))
             return;
-        //Dont shock if the attacker used a toy
-        if (EntityManager.TryGetComponent<MeleeWeaponComponent>(args.Used, out var meleeWeaponComponent))
-        {
-            if (!_meleeWeapon.GetDamage(args.Used, args.User).Any())
-                return;
-        }
+
+        if (_meleeWeapon.GetDamage(args.Used, args.User).Empty)
+            return;
+
         TryDoElectrifiedAct(uid, args.User, 1, electrified);
     }
 
@@ -187,7 +185,7 @@ public sealed class ElectrocutionSystem : SharedElectrocutionSystem
         if (!component.CurrentLit || args.Used != args.User)
             return;
 
-        if (!_meleeWeapon.GetDamage(args.Used, args.User).Any())
+        if (_meleeWeapon.GetDamage(args.Used, args.User).Empty)
             return;
 
         DoCommonElectrocution(args.User, uid, component.UnarmedHitShock, component.UnarmedHitStun, false);

@@ -29,16 +29,6 @@
       item-container: !type:Container
 
 - type: entity
-  id: MechEquipmentDrill
-  parent: BaseMechEquipment
-  name: drill
-  description: Gives the mech the ability to drill
-  components:
-  - type: MechDrill
-  - type: Sprite
-    state: mecha_drill
-
-- type: entity
   id: MechEquipmentGrabberSmall
   parent: BaseMechEquipment
   name: small hydraulic clamp

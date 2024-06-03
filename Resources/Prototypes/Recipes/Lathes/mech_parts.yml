@@ -53,17 +53,6 @@
     Steel: 500
     Plastic: 200
 
-- type: latheRecipe
-  id: MechEquipmentDrill
-  icon:
-     sprite: Objects/Specific/Mech/mecha_equipment.rsi
-     state: mecha_drill
-  result: MechEquipmentDrill
-  completetime: 10
-  materials:
-    Steel: 600
-    Glass: 200
-
 # H.O.N.K.
 - type: latheRecipe
   id: HonkerHarness
