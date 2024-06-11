@@ -2,7 +2,7 @@
     .desc = Пассажир по персональным данным.
 ent-BaseMedicalPDA = { ent-BasePDA }
     .desc = { ent-BasePDA.desc }
-ent-PassengerPDA = КПК Пассижира
+ent-PassengerPDA = КПК пассажира
     .desc = Почему он не серый?
 ent-TechnicalAssistantPDA = КПК ассистента-техника
     .desc = Почему он не жёлтый?
