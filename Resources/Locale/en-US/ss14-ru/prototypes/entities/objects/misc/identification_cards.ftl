@@ -1,6 +1,6 @@
 ent-IDCardStandard = identification card
     .desc = A card necessary to access various areas aboard the station.
-ent-PassengerIDCard = assistant ID card
+ent-PassengerIDCard = passenger ID card
     .desc = { ent-IDCardStandard.desc }
 ent-TechnicalAssistantIDCard = technical assistant ID card
     .desc = { ent-PassengerIDCard.desc }

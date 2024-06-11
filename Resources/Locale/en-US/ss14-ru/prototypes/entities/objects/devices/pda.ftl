@@ -1,8 +1,8 @@
 ent-BasePDA = PDA
-    .desc = Personal Data Assistant.
+    .desc = Personal Data Passenger.
 ent-BaseMedicalPDA = { ent-BasePDA }
     .desc = { ent-BasePDA.desc }
-ent-PassengerPDA = assistant PDA
+ent-PassengerPDA = passenger PDA
     .desc = Why isn't it gray?
 ent-TechnicalAssistantPDA = technical assistant PDA
     .desc = Why isn't it yellow?

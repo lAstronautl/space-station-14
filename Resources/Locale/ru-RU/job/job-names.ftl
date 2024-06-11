@@ -1,4 +1,4 @@
-job-name-warden = Смотритель
+﻿job-name-warden = Смотритель
 job-name-security = Офицер СБ
 job-name-cadet = Кадет СБ
 job-name-hos = Глава службы безопасности
@@ -30,7 +30,7 @@ job-name-janitor = Уборщик
 job-name-chaplain = Священник
 job-name-botanist = Ботаник
 job-name-bartender = Бармен
-job-name-passenger = Ассистент
+job-name-passenger = Пассажир
 job-name-salvagespec = Утилизатор
 job-name-qm = Квартирмейстер
 job-name-cargotech = Грузчик
