@@ -124,6 +124,10 @@
       collection: FemaleCry
     Weh:
       collection: Weh
+    Gasp:
+      collection: FemaleGasp
+    DefaultDeathgasp:
+      collection: FemaleDeathGasp
     Buzzing:
       path: /Audio/Voice/Moth/moth_scream.ogg
 
@@ -374,7 +378,7 @@
     Gasp:
       collection: MaleGasp
     DefaultDeathgasp:
-      collection: DeathGasp
+      collection: MothDeathGasp
     Buzzing:
       path: /Audio/Voice/Moth/moth_scream.ogg
 
