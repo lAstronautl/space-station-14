@@ -254,7 +254,7 @@
     - state: panel
       map: ["enum.WiresVisualLayers.MaintenancePanel"]
   - type: Machine
-    board: ProtolatheMachineCircuitboard
+    board: 
   - type: MaterialStorage
     whitelist:
       tags:
@@ -266,6 +266,9 @@
     runningState: building
     staticRecipes:
     - LargeBeaker
+# Starshine-start
+    - LargeBottle
+# Starshine-end
     - Dropper
     - ClothingEyesGlassesChemical
     dynamicRecipes:
@@ -317,7 +320,11 @@
       - WeaponForceGun
       - WeaponLaserSvalinn
       - WeaponProtoKineticAccelerator
+      - WeaponCutter
+# Starshine-start
+      - WeaponCutterAdv
       - WeaponTetherGun
+# Starshine-end
       - WeaponGrapplingGun
       - ClothingBackpackHolding
       - ClothingBackpackSatchelHolding
@@ -374,15 +381,15 @@
       - WeaponXrayCannon
 
 - type: entity
-  id: ProtolatheHyperConvection
-  parent: [Protolathe, BaseHyperlathe]
+  id: BaseLatheHyperConvection
+  parent: [BaseLathe, BaseHyperlathe]
   name: hyper convection protolathe
   description: A highly-experimental protolathe that harnesses the power of extreme heat to slowly create objects more cost-effectively.
   components:
   - type: Sprite
     sprite: Structures/Machines/protolathe_hypercon.rsi
   - type: Machine
-    board: ProtolatheHyperConvectionMachineCircuitboard
+    board: BaseLatheHyperConvectionMachineCircuitboard
 
 - type: entity
   id: CircuitImprinter
@@ -405,10 +412,10 @@
     board: CircuitImprinterMachineCircuitboard
   - type: Lathe
     producingSound: /Audio/Machines/circuitprinter.ogg
+    errorSound: /Audio/Machines/custom_deny.ogg
     idleState: icon
     runningState: building
     staticRecipes:
-    - ProtolatheMachineCircuitboard
     - AutolatheMachineCircuitboard
     - CircuitImprinterMachineCircuitboard
     - OreProcessorMachineCircuitboard
@@ -452,7 +459,7 @@
       - TurboItemRechargerCircuitboard
       - PowerComputerCircuitboard
       - AutolatheHyperConvectionMachineCircuitboard
-      - ProtolatheHyperConvectionMachineCircuitboard
+      - BaseLatheHyperConvectionMachineCircuitboard
       - CircuitImprinterHyperConvectionMachineCircuitboard
       - FatExtractorMachineCircuitboard
       - FlatpackerMachineCircuitboard
@@ -609,6 +616,20 @@
     - BorgModuleDiagnosis
     - BorgModuleDefibrillator
     - BorgModuleAdvancedTreatment
+# Starshine-start
+    - ModsuitHelmet
+    - ModsuitGauntlets
+    - ModsuitChestplate
+    - ModsuitBoots
+    - ModsuitPlateAtmospheric
+    - ModsuitPlateCosmohonk
+    - ModsuitPlateEngineering
+    - ModsuitPlateMedical
+    - ModsuitPlateSecurity
+    - ModsuitPlateStandard
+    - ModsuitPlateMining
+    - ModsuitAssembly
+# Starshine-end
     - RipleyHarness
     - RipleyLArm
     - RipleyRArm
@@ -628,12 +649,37 @@
     - HamtrLLeg
     - HamtrRLeg
     - VimHarness
+# Starshine-start
+    - ClarkHarness
+    - ClarkLArm
+    - ClarkLLeg
+    - ClarkRLeg
+    - ClarkRArm
+    - OdysseusHarness
+    - OdysseusLArm
+    - OdysseusLLeg
+    - OdysseusRLeg
+    - OdysseusRArm
+    - DurandHarness
+    - DurandLArm
+    - DurandLLeg
+    - DurandRLeg
+    - DurandRArm
+    - DurandArmor
+    - GygaxHarness
+    - GygaxLArm
+    - GygaxLLeg
+    - GygaxRLeg
+    - GygaxRArm
+    - GygaxArmor
+# Starshine-end
   - type: MaterialStorage
     whitelist:
       tags:
       - Sheet
       - RawMaterial
       - Ingot
+      - Uranium
   - type: GuideHelp
     guides:
     - Robotics
@@ -687,6 +733,8 @@
   name: security techfab
   description: Prints equipment for use by security crew.
   components:
+  - type: AccessReader
+    access: [["Brig"]]
   - type: Sprite
     sprite: Structures/Machines/techfab.rsi
     layers:
@@ -703,6 +751,8 @@
   - type: Machine
     board: SecurityTechFabCircuitboard
   - type: Lathe
+    producingSound: /Audio/Machines/circuitprinter.ogg
+    soundError: /Audio/Machines/custom_deny.ogg
     idleState: icon
     runningState: icon
     staticRecipes:
@@ -746,6 +796,14 @@
       - WeaponDisablerPractice
       - WeaponLaserCarbinePractice
       - Zipties
+# Starshine-start
+      - MagazinePistolPractice
+      - MagazinePistolSubMachineGunPractice
+      - MagazineVectorPistolSmallPractice
+      - MagazineRiflePractice
+      - MagazineVectorRifleSmallPractice
+      - SpeedLoaderMagnumPractice
+# Starshine-end
     dynamicRecipes:
       - BoxBeanbag
       - BoxShotgunIncendiary
@@ -774,6 +832,12 @@
       - MagazineRifleUranium
       - MagazineShotgunBeanbag
       - MagazineShotgunIncendiary
+# Starshine-start
+      - MagazineBoxLightRifleRubber
+      - MagazineBoxMagnumRubber
+      - MagazineBoxPistolRubber
+      - MagazineBoxRifleRubber
+# Starshine-end
       - PortableRecharger
       - PowerCageHigh
       - PowerCageMedium
@@ -796,6 +860,20 @@
       - WeaponLaserCannon
       - WeaponLaserCarbine
       - WeaponXrayCannon
+# Starshine-start
+      - BowCompound
+      - ArrowCompound
+      - ClothingBeltQuiverComposit
+      - ClothingHeadHelmetRiot
+      - ClothingHeadHelmetBasic
+      - ClothingHeadHelmetSwat
+      - ClothingOuterArmorRiot
+      - ClothingOuterArmorBasicSlim
+      - ClothingOuterArmorBasic
+      - ClothingOuterArmorBulletproof
+      - ClothingBeltSecurityWebbing
+      - ClothingBeltSecurity
+# Starshine-end
   - type: MaterialStorage
     whitelist:
       tags:
@@ -803,12 +881,73 @@
         - RawMaterial
         - Ingot
 
+## Starshine-start
+# Machine which makes weapons and ammunition
+- type: entity
+  parent: BaseLathe
+  id: WeaponTechFab
+  name: Weapon techfab
+  description: Prints weapons for use by security crew.
+  components:
+  - type: AccessReader
+    access: [["Armory"]]
+  - type: Sprite
+    netsync: false
+    sprite: Structures/Machines/techfab.rsi
+    layers:
+    - state: icon
+      map: ["enum.LatheVisualLayers.IsRunning"]
+    - state: weapon
+    - state: unlit
+      shader: unshaded
+      map: ["enum.PowerDeviceVisualLayers.Powered"]
+    - state: inserting
+      map: ["enum.MaterialStorageVisualLayers.Inserting"]
+    - state: panel
+      map: ["enum.WiresVisualLayers.MaintenancePanel"]
+  - type: Machine
+    board: WeaponTechFabCircuitboard
+  - type: Lathe
+    producingSound: /Audio/Machines/circuitprinter.ogg
+    soundError: /Audio/Machines/custom_deny.ogg
+    idleState: icon
+    runningState: icon
+    staticRecipes:
+      - WeaponDisablerPractice
+    dynamicRecipes:
+      # Weapons kinetic
+      - WeaponPistolMk58
+      - WeaponPistolMk68
+      - WeaponRevolverInspector
+      - WeaponLaserGun
+      - WeaponAdvancedLaser
+      - WeaponSubMachineGunWt550
+      - WeaponSubMachineGunVector
+      - WeaponSubMachineGunDrozd
+      - WeaponRifleLecter
+      - WeaponLaserCarbine
+      - WeaponLaserCannon
+      - WeaponXrayCannon
+      - WeaponShotgunKammerer
+      - WeaponShotgunEnforcer
+  - type: MaterialStorage
+    whitelist:
+      tags:
+        - Sheet
+        - RawMaterial
+        - Ingot
+        - Wood
+        - Uranium
+## Starshine-end
+
 - type: entity
   id: AmmoTechFab
   parent: BaseLatheLube
   name: ammo techfab
   description: Prints the bare minimum of bullets that any budget military or armory could need. Nothing fancy.
   components:
+    - type: AccessReader
+      access: [["Armory"]]
     - type: Sprite
       sprite: Structures/Machines/techfab.rsi
       layers:
@@ -828,25 +967,52 @@
       idleState: icon
       runningState: icon
       staticRecipes:
-        - BoxLethalshot
         - BoxShotgunFlare
+      dynamicRecipes:
         - BoxShotgunSlug
         - BoxShellTranquilizer
         - MagazineBoxLightRifle
-        - MagazineBoxMagnum
         - MagazineBoxPistol
         - MagazineBoxRifle
         - MagazineLightRifle
         - MagazineLightRifleEmpty
-        - MagazinePistol
         - MagazinePistolEmpty
+        # Weapons kinetic
+## Starshine
+        - MagazinePistol
+        - MagazinePistolRubber
+        - MagazinePistolHighCapacity
+        - MagazinePistolHighCapacityRubber
+        - MagazineVectorPistolSmall
+        - MagazineVectorPistolSmallRubber
+        - MagazineVectorPistol
+        - MagazineVectorPistolRubber
+        - MagazinePistolSubMachineGun
+        - MagazinePistolSubMachineGunRubber
+        - MagazinePistolSubMachineGunTopMounted
+        - MagazineVectorRifle
+        - MagazineVectorRifleRubber
         - MagazineRifle
+        - MagazineRifleRubber
         - MagazineRifleEmpty
+        - MagazineRifleExt
+        - MagazineRifleExtRubber
+        - MagazineLightRifleRubber
         - MagazineShotgun
         - MagazineShotgunEmpty
         - MagazineShotgunSlug
         - SpeedLoaderMagnum
         - SpeedLoaderMagnumEmpty
+        - MagazineShotgunSaiga
+        - MagazineBoxMagnum
+        - MagazineBoxPistolIncendiary
+        - MagazineBoxPistolRubber
+        - MagazineBoxRifleBig
+        - MagazineBoxRifleIncendiary
+        - MagazineBoxRifleRubber
+        - BoxLethalshot
+        - BoxShotgunIncendiary
+        - BoxBeanbag        
     - type: MaterialStorage
       whitelist:
         tags:
@@ -889,6 +1055,10 @@
       - DiseaseSwab
       - Beaker
       - LargeBeaker
+# Starshine-start
+      - LargeBottle
+      - InjectorCase
+# Starshine-end
       - Dropper
       - Jug
       - Syringe
@@ -954,6 +1124,7 @@
       - ClothingHeadHatCapcap
       - ClothingHeadHatCaptain
       - ClothingUniformJumpsuitCaptain
+      - ClothingUniformJumpsuitBlueShield
       - ClothingUniformJumpskirtCaptain
       - ClothingUniformJumpsuitCapFormal
       - ClothingUniformJumpskirtCapFormalDress
@@ -1232,3 +1403,166 @@
     staticRecipes:
     - MaterialSheetMeat
     - SheetPaper
+
+- type: entity
+  parent: BaseLathe
+  id: ScienceTechFab
+  name: science techfab
+  description: Prints equipment for use by the epistemics department.
+  components:
+  - type: Sprite
+    netsync: false
+    sprite: Structures/Machines/techfab.rsi
+    layers:
+    - state: icon
+      map: ["enum.LatheVisualLayers.IsRunning"]
+    - state: sci
+    - state: unlit
+      shader: unshaded
+      map: ["enum.PowerDeviceVisualLayers.Powered"]
+    - state: inserting
+      map: ["enum.MaterialStorageVisualLayers.Inserting"]
+    - state: panel
+      map: ["enum.WiresVisualLayers.MaintenancePanel"]
+  - type: Machine
+    board: ScienceTechFabCircuitboard
+  - type: Lathe
+    idleState: icon
+    runningState: icon
+    staticRecipes:
+      - LightTube
+    dynamicRecipes:
+      - Holoprojector
+  - type: MaterialStorage
+    whitelist:
+      tags:
+        - Sheet
+        - RawMaterial
+        - Ingot
+    materialWhiteList:
+    - Glass
+    - Plastic
+    - Steel
+    - Durathread
+
+- type: entity
+  parent: BaseLathe
+  id: ServiceTechFab
+  name: service techfab
+  description: Prints equipment for service staff.
+  components:
+  - type: Sprite
+    netsync: false
+    sprite: Structures/Machines/techfab.rsi
+    layers:
+    - state: icon
+      map: ["enum.LatheVisualLayers.IsRunning"]
+    - state: service
+    - state: unlit
+      shader: unshaded
+      map: ["enum.PowerDeviceVisualLayers.Powered"]
+    - state: inserting
+      map: ["enum.MaterialStorageVisualLayers.Inserting"]
+    - state: panel
+      map: ["enum.WiresVisualLayers.MaintenancePanel"]
+  - type: Machine
+    board: ServiceTechFabCircuitboard
+  - type: Lathe
+    idleState: icon
+    runningState: icon    
+    staticRecipes:
+      - LightTube
+    dynamicRecipes:
+      - Holoprojector
+  - type: MaterialStorage
+    whitelist:
+      tags:
+        - Sheet
+        - RawMaterial
+        - Ingot
+    materialWhiteList:
+    - Steel
+    - Plastic
+    - Glass
+    - Durathread
+    - Wood
+
+- type: entity
+  parent: BaseLathe
+  id: EngineeringTechFab
+  name: engineering techfab
+  description: Prints equipment for engineers.
+  components:
+  - type: Sprite
+    netsync: false
+    sprite: Structures/Machines/techfab.rsi
+    layers:
+    - state: icon
+      map: ["enum.LatheVisualLayers.IsRunning"]
+    - state: engi
+    - state: unlit
+      shader: unshaded
+      map: ["enum.PowerDeviceVisualLayers.Powered"]
+    - state: inserting
+      map: ["enum.MaterialStorageVisualLayers.Inserting"]
+    - state: panel
+      map: ["enum.WiresVisualLayers.MaintenancePanel"]
+  - type: Machine
+    board: EngineeringTechFabCircuitboard
+  - type: Lathe
+    idleState: icon
+    runningState: icon
+    staticRecipes:
+      - LightTube
+    dynamicRecipes:
+      - Holoprojector
+  - type: MaterialStorage
+    whitelist:
+      tags:
+        - Sheet
+        - RawMaterial
+        - Ingot
+    materialWhiteList:
+    - Glass
+    - Plastic
+    - Steel
+    - Gold # Frontier
+    - Silver # Frontier
+
+- type: entity
+  parent: Protolathe
+  id: SalvageTechfabNF
+  name: salvage techfab
+  description: Prints equipment for salvagers.
+  components:
+  - type: Sprite
+    netsync: false
+    sprite: Structures/Machines/techfab.rsi
+    layers:
+    - state: icon
+      map: ["enum.LatheVisualLayers.IsRunning"]
+    - state: cargo
+    - state: unlit
+      shader: unshaded
+      map: ["enum.PowerDeviceVisualLayers.Powered"]
+    - state: inserting
+      map: ["enum.MaterialStorageVisualLayers.Inserting"]
+    - state: panel
+      map: ["enum.WiresVisualLayers.MaintenancePanel"]
+  - type: Machine
+    board: SalvageTechFabCircuitboardNF
+  - type: Lathe
+    idleState: icon
+    runningState: icon
+    staticRecipes:
+      - LightTube
+    dynamicRecipes:
+      - Holoprojector
+  - type: MaterialStorage
+    whitelist:
+      tags:
+        - Sheet
+        - RawMaterial
+        - Ingot
+#        - Ore
+
