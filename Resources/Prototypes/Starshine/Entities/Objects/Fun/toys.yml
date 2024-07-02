@@ -1,0 +1,177 @@
+﻿- type: entity
+  parent: BaseItem
+  id: ToyEnergySwordDouble
+  name: toy double-bladed energy sword
+  description: New Sandy-Cat plastic sword! Comes with realistic sound and full color! Looks almost like the real thing!
+  components:
+    - type: EnergySword
+      colorOptions:
+        - DodgerBlue
+    - type: ItemToggle
+      soundActivate:
+        path: /Audio/Weapons/ebladeon.ogg
+      soundDeactivate:
+        path: /Audio/Weapons/ebladeoff.ogg
+    - type: ItemToggleActiveSound
+      activeSound:
+        path: /Audio/Weapons/ebladehum.ogg
+    - type: Sprite
+      sprite: Objects/Weapons/Melee/e_sword_double.rsi
+      layers:
+        - state: e_sword_double
+        - state: e_sword_double_blade
+          color: "#FFFFFF"
+          visible: false
+          shader: unshaded
+          map: [ "blade" ]
+    - type: Item
+      size: Small
+      sprite: Objects/Weapons/Melee/e_sword_double-inhands.rsi
+    - type: UseDelay
+      delay: 1.0
+    - type: PointLight
+      enabled: false
+      radius: 2
+      energy: 2
+      color: white
+      netsync: false
+    - type: Appearance
+    - type: ItemToggleDisarmMalus
+      activatedDisarmMalus: 0.7
+    - type: Wieldable
+    - type: ToggleableLightVisuals
+      spriteLayer: blade
+      inhandVisuals:
+        left:
+          - state: inhand-left-blade
+            shader: unshaded
+        right:
+          - state: inhand-right-blade
+            shader: unshaded
+    - type: DisarmMalus
+      malus: 0
+    - type: StaminaDamageOnHit
+      damage: 5
+    - type: MeleeWeapon
+      wideAnimationRotation: -135
+      attackRate: 1.1
+      angle: 100
+      damage:
+        types:
+          Blunt: 0
+    - type: Reflect
+      enabled: false
+      reflectProb: .005
+      minReflectProb: .0005
+      spread: 75
+    - type: ItemToggleMeleeWeapon
+      activatedSoundOnHit:
+        path: /Audio/Weapons/eblade1.ogg
+        params:
+          variation: 0.250
+      activatedSoundOnHitNoDamage:
+        path: /Audio/Weapons/eblade1.ogg
+        params:
+          variation: 0.250
+      activatedSoundOnSwing:
+        path: /Audio/Weapons/eblademiss.ogg
+        params:
+          variation: 0.125
+
+- type: entity
+  name: toy energy shield
+  parent: BaseItem
+  id: ToyEnergyShield
+  description: New Sandy-Cat plastic shield! Comes with realistic sound and full color! Looks almost like the real thing!
+  components:
+    - type: EnergySword
+    - type: ItemToggle
+      soundActivate:
+        path: /Audio/Weapons/ebladeon.ogg
+      soundDeactivate:
+        path: /Audio/Weapons/ebladeoff.ogg
+    - type: ItemToggleActiveSound
+      activeSound:
+        path: /Audio/Weapons/ebladehum.ogg
+    - type: ItemToggleSize
+      activatedSize: Huge
+    - type: ItemToggleDisarmMalus
+      activatedDisarmMalus: 0.6
+    - type: Sprite
+      sprite: Objects/Weapons/Melee/e_shield.rsi
+      layers:
+        - state: eshield-icon
+        - state: eshield-on
+          color: "#FFFFFF"
+          visible: false
+          shader: unshaded
+          map: [ "shield" ]
+    - type: Item
+      size: Small
+      sprite: Objects/Weapons/Melee/e_shield.rsi
+      heldPrefix: eshield
+    - type: UseDelay
+      delay: 0.5
+    - type: ToggleableLightVisuals
+      spriteLayer: shield
+      inhandVisuals:
+        left:
+          - state: inhand-left-shield
+            shader: unshaded
+        right:
+          - state: inhand-right-shield
+            shader: unshaded
+    - type: PointLight
+      netsync: false
+      enabled: false
+      radius: 1.5
+      energy: 2
+      color: blue
+    - type: Reflect
+      enabled: false
+      reflectProb: 0.05
+      innate: true
+      reflects:
+        - Energy
+    - type: Blocking
+      passiveBlockFraction: 0.01
+      passiveBlockModifier:
+        coefficients:
+          Blunt: 0.01
+          Slash: 0.01
+          Piercing: 0.01
+          Heat: 0.1
+      activeBlockModifier:
+        coefficients:
+          Blunt: 0.01
+          Slash: 0.01
+          Piercing: 0.01
+          Heat: 0.1
+        flatReductions:
+          Heat: 0.1
+          Piercing: 0.01
+    - type: Appearance
+    - type: Damageable
+      damageContainer: Shield
+    - type: Destructible
+      thresholds:
+        - trigger:
+            !type:DamageTrigger
+            damage: 15
+          behaviors:
+            - !type:DoActsBehavior
+              acts: [ "Destruction" ]
+        - trigger:
+            !type:DamageTrigger
+            damage: 10
+          behaviors:
+            - !type:DoActsBehavior
+              acts: [ "Destruction" ]
+            - !type:PlaySoundBehavior
+              sound:
+                collection: GlassBreak
+            - !type:SpawnEntitiesBehavior
+              spawn:
+                BrokenEnergyShield:
+                  min: 1
+                  max: 1

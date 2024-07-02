@@ -111,6 +111,11 @@
             Slash: 10
             Heat: 10
     deactivatedSecret: true
+  - type: DamageOtherOnHit
+    damage:
+      types:
+          Slash: 10
+          Heat: 10
   - type: ItemToggleActiveSound
     activeSound:
       path: /Audio/Weapons/ebladehum.ogg
