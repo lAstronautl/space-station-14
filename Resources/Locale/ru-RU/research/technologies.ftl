@@ -26,6 +26,7 @@ research-technology-uranium-munitions = Урановые боеприпасы
 research-technology-draconic-munitions = Драконовые боеприпасы
 research-technology-explosive-technology = Технология взрывчаток
 research-technology-nonlethal-ammunition = Нелетальная аммуниция
+research-technology-wave-particle-harnessing = Использование рентген-частиц
 research-technology-advanced-riot-control = Боевой контроль беспорядков
 research-technology-portable-microfusion-weaponry = Ручное микроинфузионное оружие
 research-technology-experimental-battery-ammo = Экспериментальные батарейные боеприпасы

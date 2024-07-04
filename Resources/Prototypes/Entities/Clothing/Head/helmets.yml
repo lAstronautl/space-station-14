@@ -22,6 +22,10 @@
   - type: Tag
     tags:
     - WhitelistChameleon
+  - type: HideLayerClothing
+    slots:
+    - HeadTop
+    - HeadSide
 
 #Mercenary Helmet
 - type: entity
@@ -114,6 +118,8 @@
     slots:
     - Hair
     - Snout
+    - HeadTop
+    - HeadSide
 
 #Janitorial Bombsuit Helmet
 - type: entity
@@ -214,6 +220,8 @@
     slots:
     - Hair
     - Snout
+    - HeadTop
+    - HeadSide
 
 #Templar Helmet
 - type: entity
@@ -280,6 +288,8 @@
     slots:
     - Hair
     - Snout
+    - HeadTop
+    - HeadSide
 
 #Atmos Fire Helmet
 - type: entity
@@ -309,6 +319,8 @@
     slots:
     - Hair
     - Snout
+    - HeadTop
+    - HeadSide
   - type: BreathMask
 
 #Chitinous Helmet
