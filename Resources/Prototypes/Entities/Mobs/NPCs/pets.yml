@@ -388,8 +388,6 @@
     tags:
     - CannotSuicide
     - VimPilot
-  - type: StealTarget
-    stealGroup: AnimalWalter
 
 - type: entity
   name: Morty
