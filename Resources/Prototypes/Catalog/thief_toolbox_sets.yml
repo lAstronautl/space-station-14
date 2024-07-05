@@ -45,9 +45,8 @@
   - StorageImplanter
   - DnaScramblerImplanter
   - EphedrineChemistryBottle
-  - SoapOmega
-  - Syringe
-  - DrinkShaker
+  - SyringeStimulants
+  - VestineChemistryVial
 
 - type: thiefBackpackSet
   id: SyndieSet
@@ -61,7 +60,7 @@
   - Emag
   - SyndicatePersonalAI
   - CigPackSyndicate
-  - Telecrystal10 #The thief cannot use them, but it may induce communication with traitors
+  - RadioJammer
 
 - type: thiefBackpackSet
   id: SleeperSet
@@ -72,7 +71,7 @@
     state: icon
   content:
   - NocturineChemistryBottle
-  - NocturineChemistryBottle
+  - MuteToxinChemistryBottle
   - HypopenBox
   - NitrousOxideTankFilled
 
