@@ -234,8 +234,6 @@
     tags:
     - CannotSuicide
     - VimPilot
-  - type: StealTarget
-    stealGroup: AnimalBingus
 
 - type: entity
   name: McGriff

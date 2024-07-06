@@ -104,7 +104,6 @@
   id: ThiefObjectiveGroupAnimal
   weights:
     IanStealObjective: 1
-    BingusStealObjective: 1
     McGriffStealObjective: 1
     MortyStealObjective: 1
     RenaultStealObjective: 1
