@@ -56,23 +56,12 @@
 
 - type: entity
   parent: BaseThiefStealCollectionObjective
-  id: FigurineStealCollectionObjective
-  components:
-  - type: StealCondition
-    stealGroup: Figurines
-    minCollectionSize: 10
-    maxCollectionSize: 50 #will be limited to the number of figures on the station anyway.
-  - type: Objective
-    difficulty: 0.25
-
-- type: entity
-  parent: BaseThiefStealCollectionObjective
   id: HeadCloakStealCollectionObjective
   components:
   - type: StealCondition
     stealGroup: HeadCloak
-    minCollectionSize: 3
-    maxCollectionSize: 6
+    minCollectionSize: 1
+    maxCollectionSize: 2
   - type: Objective
     difficulty: 1.5
 
@@ -82,8 +71,8 @@
   components:
   - type: StealCondition
     stealGroup: HeadBedsheet
-    minCollectionSize: 3
-    maxCollectionSize: 6
+    minCollectionSize: 1
+    maxCollectionSize: 2
   - type: Objective
     difficulty: 1.0
 
@@ -93,8 +82,8 @@
   components:
   - type: StealCondition
     stealGroup: Stamp
-    minCollectionSize: 5
-    maxCollectionSize: 15
+    minCollectionSize: 3
+    maxCollectionSize: 6
   - type: Objective
     difficulty: 1.0
 
@@ -104,8 +93,8 @@
   components:
   - type: StealCondition
     stealGroup: DoorRemote
-    minCollectionSize: 2
-    maxCollectionSize: 5
+    minCollectionSize: 1
+    maxCollectionSize: 2
   - type: Objective
     difficulty: 1.5
 
@@ -134,8 +123,6 @@
     verifyMapExistence: false
   - type: Objective
     difficulty: 0.7
-
-
 
 - type: entity
   parent: BaseThiefStealCollectionObjective
@@ -448,17 +435,6 @@
     job: Detective
   - type: StealCondition
     stealGroup: AnimalMcGriff
-  - type: Objective
-    difficulty: 1
-
-- type: entity
-  parent: BaseThiefStealAnimalObjective
-  id: WalterStealObjective
-  components:
-  - type: NotJobRequirement
-    job: Chemist
-  - type: StealCondition
-    stealGroup: AnimalWalter
   - type: Objective
     difficulty: 1
 
