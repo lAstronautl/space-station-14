@@ -59,6 +59,10 @@
 - type: weightedRandom
   id: ThiefObjectiveGroupCollection
   weights:
+    HeadCloakStealCollectionObjective: 1           #command
+    HeadBedsheetStealCollectionObjective: 1
+    StampStealCollectionObjective: 1
+    DoorRemoteStealCollectionObjective: 1
     TechnologyDiskStealCollectionObjective: 1      #rnd
     IDCardsStealCollectionObjective: 1             #service
     LAMPStealCollectionObjective: 2 #only for moth
@@ -102,6 +106,7 @@
     IanStealObjective: 1
     BingusStealObjective: 1
     McGriffStealObjective: 1
+    WalterStealObjective: 1
     MortyStealObjective: 1
     RenaultStealObjective: 1
     ShivaStealObjective: 1

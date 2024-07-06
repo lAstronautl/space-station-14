@@ -11,6 +11,8 @@
     storedRotation: -90
   - type: Access
   - type: DoorRemote
+  - type: StealTarget
+    stealGroup: DoorRemote
 
 - type: entity
   parent: DoorRemoteDefault
