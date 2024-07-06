@@ -134,21 +134,20 @@
       reflects:
         - Energy
     - type: Blocking
-      passiveBlockFraction: 0.01
       passiveBlockModifier:
         coefficients:
-          Blunt: 0.01
-          Slash: 0.01
-          Piercing: 0.01
-          Heat: 0.1
+          Blunt: 1.0
+          Slash: 0.9
+          Piercing: 0.85
+          Heat: 0.6
       activeBlockModifier:
         coefficients:
-          Blunt: 0.01
-          Slash: 0.01
-          Piercing: 0.01
-          Heat: 0.1
+          Blunt: 1.2
+          Slash: 0.85
+          Piercing: 0.5
+          Heat: 0.4
         flatReductions:
-          Heat: 0.1
+          Heat: 0.01
           Piercing: 0.01
     - type: Appearance
     - type: Damageable
@@ -157,7 +156,7 @@
       thresholds:
         - trigger:
             !type:DamageTrigger
-            damage: 15
+            damage: 18
           behaviors:
             - !type:DoActsBehavior
               acts: [ "Destruction" ]
