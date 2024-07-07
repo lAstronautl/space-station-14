@@ -174,3 +174,40 @@
                 BrokenEnergyShield:
                   min: 1
                   max: 1
+
+- type: entity
+  parent: BaseItem
+  id: PlasteelHammer
+  name: rubber hammer
+  description: This is a copy of the legendary rubber toy hammer, but made of plasteel. BONK!
+  components:
+    - type: Sprite
+      sprite: Objects/Fun/rubber_hammer.rsi
+      state: icon
+    - type: WeaponRandom
+      RandomDamageChance: 2E-05
+      damageBonus:
+          types:
+              Blunt: 1000
+    - type: StaminaDamageOnHit
+      damage: 25
+    - type: Item
+      size: Small
+      sprite: Objects/Fun/rubber_hammer.rsi
+    - type: Appearance
+    - type: DisarmMalus
+      malus: 0
+    - type: MeleeWeapon
+      soundHit:
+        collection: MetalThud
+        params:
+            variation: 0.03
+            volume: 3
+      soundNoDamage:
+        collection: MetalThud
+        params:
+            variation: 0.03
+            volume: 3
+      damage:
+        types:
+          Blunt: 12
