@@ -1935,7 +1935,7 @@
       - SurplusBundle
 
 - type: listing
-  id: uplink
+  id: uplinkMinerSyndie
   name: uplink-syndie-miner-armor-name
   description: uplink-syndie-miner-armor-desc
   productEntity: ClothingOuterArmorMinerSyndie

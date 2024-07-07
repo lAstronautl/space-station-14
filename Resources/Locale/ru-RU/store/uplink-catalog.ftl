@@ -1,4 +1,4 @@
-# Вооружение
+﻿# Вооружение
 uplink-pistol-viper-name = Гадюка
 uplink-pistol-viper-desc = Небольшой, легко скрываемый, но маломощный пистолет. Оснащён полностью автоматическим ресивером. Использует патроны калибра .35 авто.
 uplink-revolver-python-name = Питон
@@ -185,6 +185,8 @@ uplink-gatfruit-seeds-name = Пакет семян гатфрукта
 uplink-gatfruit-seeds-desc = И кто сказал, что пушки не растут на деревьях?
 uplink-rigged-boxing-gloves-name = Нечестные боксёрские перчатки
 uplink-rigged-boxing-gloves-desc = Порхай как бабочка, жаль как пчела.
+uplink-plasteel-hammer-name = Пластановый молот
+uplink-plasteel-hammer-desc = Легендарный ремейк резинового молота, но сделан он из пластали. БОНЬК!
 uplink-necronomicon-name = Некрономикон
 uplink-necronomicon-desc = Нечестивая книга, позволяющая призвать демонического фамильяра.
 uplink-holy-hand-grenade-name = Святая ручная граната
