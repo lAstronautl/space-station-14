@@ -2,7 +2,7 @@
   parent: BaseItem
   id: ToyEnergySwordDouble
   name: toy double-bladed energy sword
-  description: New Sandy-Cat plastic sword! Comes with realistic sound and full color! Looks almost like the real thing!
+  description: New Sandy-Cat plastic double-bladed sword! Comes with realistic sound and full color! Looks almost like the real thing!
   components:
     - type: EnergySword
       colorOptions:
