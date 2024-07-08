@@ -1,4 +1,4 @@
-## Starshine
+﻿## Starshine
 uplink-bow-bundle-name = Набор композитного лука
 uplink-bow-bundle-desc = Скрытая угроза: Композитный лук, созданный компанией Cybersun. Имеет с собой колчан стрел.
 uplink-bow-compound-red-name = Кровавый композитный лук
@@ -23,3 +23,5 @@ uplink-clothing-pnv-name = ПНВ
 uplink-clothing-pnv-desc = Прибор ночного видения.
 uplink-m90gl-bundle-name = Набор m90-gl
 uplink-m90gl-bundle-desc = Старая винтовка типа булпап. И нет, подствольник не настоящий.
+uplink-plasteel-hammer-name = Пластановый молот
+uplink-plasteel-hammer-desc = Легендарный ремейк резинового молота, но сделан он из пластали. БОНЬК!

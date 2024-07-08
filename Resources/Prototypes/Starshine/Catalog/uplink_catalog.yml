@@ -113,7 +113,19 @@
   categories:
     - UplinkWearables
 
-
+- type: listing
+  id: uplinkPlasteelHammer
+  name: uplink-plasteel-hammer-name
+  description: uplink-plasteel-hammer-desc
+  productEntity: PlasteelHammer
+  cost:
+    Telecrystal: 6
+  categories:
+  - UplinkJob
+  conditions:
+  - !type:BuyerJobCondition
+    whitelist:
+    - Clown
 
 #- type: listing
 #  id: UplinkSyndicateMauler
