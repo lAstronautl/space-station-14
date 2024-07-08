@@ -8,15 +8,3 @@
   description: An air horn made from bananium.
   icon: { sprite: Objects/Fun/bananiumhorn.rsi, state: icon }
   objectType: Item
-
-- type: construction
-  name: toy energy shield
-  id: ToyEnergyShield
-  graph: Toy_Energy_Shield
-  startNode: start
-  targetNode: Toy_Energy_Shield
-  category: construction-category-weapons
-  description: New Sandy-Cat plastic energy shield! Comes with realistic sound and full color! Looks almost like the real thing!
-  icon: { sprite: Objects/Weapons/Melee/e_shield.rsi, state: eshield-on }
-  objectType: Item
-
