@@ -535,6 +535,10 @@
         orGroup: GiftPool
       - id: ToySword
         orGroup: GiftPool
+      - id: ToyEnergyShield
+        orGroup: GiftPool
+      - id: ToyEnergySwordDouble
+        orGroup: GiftPool
       - id: RevolverCapGun
         orGroup: GiftPool
       - id: ToyRubberDuck
@@ -588,6 +592,10 @@
       - id: ToyNuke
         orGroup: GiftPool
       - id: ToySword
+        orGroup: GiftPool
+      - id: ToyEnergyShield
+        orGroup: GiftPool
+      - id: ToyEnergySwordDouble
         orGroup: GiftPool
       - id: BalloonSyn
         prob: 0.6

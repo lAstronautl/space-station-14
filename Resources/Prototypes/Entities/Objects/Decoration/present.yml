@@ -340,6 +340,10 @@
         orGroup: GiftPool
       - id: ToySword
         orGroup: GiftPool
+      - id: ToyEnergyShield
+        orGroup: GiftPool
+      - id: ToyEnergySwordDouble
+        orGroup: GiftPool
       - id: RevolverCapGun
         orGroup: GiftPool
       - id: Ash

@@ -143,6 +143,10 @@
     - id: Bola
       prob: 0.01
       orGroup: Weapons
+    - id: ToyEnergyShield
+      prob: 0.01
+    - id: ToyEnergySwordDouble
+      prob: 0.01
     - id: ToySword
       prob: 0.01
       orGroup: Weapons
