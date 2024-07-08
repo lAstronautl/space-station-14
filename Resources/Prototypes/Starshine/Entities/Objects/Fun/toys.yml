@@ -152,6 +152,9 @@
     - type: Appearance
     - type: Damageable
       damageContainer: Shield
+    - type: Construction
+      graph: Toy_Energy_Shield
+      node: Toy_Energy_Shield
     - type: Destructible
       thresholds:
         - trigger:
