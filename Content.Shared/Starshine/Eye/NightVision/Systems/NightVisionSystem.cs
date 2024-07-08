@@ -20,7 +20,7 @@ public sealed class NightVisionSystem : EntitySystem
 
         if(_net.IsServer)
             SubscribeLocalEvent<NightVisionComponent, ComponentStartup>(OnComponentStartup);
-        SubscribeLocalEvent<NightVisionComponent, NVInstantActionEvent>(OnActionToggle);
+        SubscribeLocalEvent<NightVisionComponent, NvInstantActionEvent>(OnActionToggle);
     }
 
     [ValidatePrototypeId<EntityPrototype>]
@@ -30,20 +30,19 @@ public sealed class NightVisionSystem : EntitySystem
     {
         if (component.IsToggle)
             _actionsSystem.AddAction(uid, ref component.ActionContainer, SwitchNightVisionAction);
+        _actionsSystem.SetCooldown(component.ActionContainer, TimeSpan.FromSeconds(1)); // GCD?
     }
 
-    private void OnActionToggle(EntityUid uid, NightVisionComponent component, NVInstantActionEvent args)
+    private void OnActionToggle(EntityUid uid, NightVisionComponent component, NvInstantActionEvent args)
     {
-        component.IsNightVision = !component.IsNightVision;
-        var changeEv = new NightVisionnessChangedEvent(component.IsNightVision);
+        component.IsOn = !component.IsOn;
+        var changeEv = new NightVisionChangedEvent(component.IsOn);
         RaiseLocalEvent(uid, ref changeEv);
         Dirty(uid, component);
-        _actionsSystem.SetCooldown(component.ActionContainer, TimeSpan.FromSeconds(1));
-        if (component is { IsNightVision: true, PlaySoundOn: true })
-        {
-            if(_net.IsServer)
-                _audioSystem.PlayPvs(component.OnOffSound, uid);
-        }
+        if (component is not { IsOn: true, PlaySoundOn: true })
+            return;
+        if(_net.IsServer)
+            _audioSystem.PlayPvs(component.OffSound, uid);
     }
 
     [PublicAPI]
@@ -52,24 +51,24 @@ public sealed class NightVisionSystem : EntitySystem
         if (!Resolve(uid, ref component, false))
             return;
 
-        var old = component.IsNightVision;
+        var old = component.IsOn;
 
 
         var ev = new CanVisionAttemptEvent();
         RaiseLocalEvent(uid, ev);
-        component.IsNightVision = ev.NightVision;
+        component.IsOn = ev.NightVision;
 
-        if (old == component.IsNightVision)
+        if (old == component.IsOn)
             return;
 
-        var changeEv = new NightVisionnessChangedEvent(component.IsNightVision);
+        var changeEv = new NightVisionChangedEvent(component.IsOn);
         RaiseLocalEvent(uid, ref changeEv);
         Dirty(uid, component);
     }
 }
 
 [ByRefEvent]
-public record struct NightVisionnessChangedEvent(bool NightVision);
+public record struct NightVisionChangedEvent(bool IsOn);
 
 
 public sealed class CanVisionAttemptEvent : CancellableEntityEventArgs, IInventoryRelayEvent

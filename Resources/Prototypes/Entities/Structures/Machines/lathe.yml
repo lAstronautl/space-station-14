@@ -196,6 +196,8 @@
       - WeaponCapacitorRechargerCircuitboard
       - HandheldStationMap
       - ClothingHeadHatWelding
+      - WetFloorSign
+      - ClothingHeadHatCone
   - type: EmagLatheRecipes
     emagStaticRecipes:
       - BoxLethalshot
@@ -324,6 +326,7 @@
 # Starshine-start
       - WeaponCutterAdv
       - WeaponTetherGun
+      - ClothingEyesVision
 # Starshine-end
       - WeaponGrapplingGun
       - ClothingBackpackHolding
@@ -806,6 +809,8 @@
       - SpeedLoaderMagnumPractice
 # Starshine-end
     dynamicRecipes:
+      - WeaponDisablerSMG
+      - WeaponDisabler
       - BoxBeanbag
       - BoxShotgunIncendiary
       - BoxShotgunUranium
@@ -855,12 +860,6 @@
       - TimerTrigger
       - Truncheon
       - VoiceTrigger
-      - WeaponAdvancedLaser
-      - WeaponDisabler
-      - WeaponDisablerSMG
-      - WeaponLaserCannon
-      - WeaponLaserCarbine
-      - WeaponXrayCannon
 # Starshine-start
       - BowCompound
       - ArrowCompound
@@ -874,6 +873,9 @@
       - ClothingOuterArmorBulletproof
       - ClothingBeltSecurityWebbing
       - ClothingBeltSecurity
+# Starshine-end
+# Starshine-start
+      - SpeedLoaderAntiMaterial
 # Starshine-end
   - type: MaterialStorage
     whitelist:
@@ -931,6 +933,7 @@
       - WeaponXrayCannon
       - WeaponShotgunKammerer
       - WeaponShotgunEnforcer
+      - WeaponRevolverSuppressor
   - type: MaterialStorage
     whitelist:
       tags:
@@ -1013,7 +1016,9 @@
         - MagazineBoxRifleRubber
         - BoxLethalshot
         - BoxShotgunIncendiary
-        - BoxBeanbag        
+        - BoxBeanbag
+        - SpeedLoaderAntiMaterial
+        - MagazineBoxAntiMaterielBig
     - type: MaterialStorage
       whitelist:
         tags:

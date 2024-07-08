@@ -283,7 +283,7 @@
         - ReagentId: Bicaridine
           Quantity: 5
   - type: Tag
-    tags: []
+    tags: [AutoInjector]
 
 - type: entity
   name: space medipen
