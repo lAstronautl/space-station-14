@@ -1,0 +1,19 @@
+﻿- type: constructionGraph
+  id: ToyEnergyShield
+  start: start
+  graph:
+    - node: start
+      edges:
+    - to: ToyEnergyShield
+      steps:
+      - material: Cable
+        amount: 2
+        doAfter: 1
+      - material: Cloth
+        amount: 5
+        doAfter: 2
+      - material: WoodPlank
+        amount: 1
+        doAfter: 2
+  - node: ToyEnergyShield
+    entity: ToyEnergyShield
