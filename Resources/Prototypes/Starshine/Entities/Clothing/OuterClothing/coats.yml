@@ -40,3 +40,14 @@
     sprite: Starshine/Clothing/OuterClothing/Coats/hos_honorary_trenchcoat.rsi
   - type: Clothing
     sprite: Starshine/Clothing/OuterClothing/Coats/hos_honorary_trenchcoat.rsi
+
+- type: entity
+  parent: ClothingOuterStorageBase
+  id: ClothingOuterCoatInspector
+  name: inspector's coat
+  description: A strict inspector's coat for being intimidating during inspections.
+  components:
+  - type: Sprite
+    sprite: Clothing/OuterClothing/Coats/insp_coat.rsi
+  - type: Clothing
+    sprite: Clothing/OuterClothing/Coats/insp_coat.rsi
