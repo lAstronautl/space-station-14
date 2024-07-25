@@ -29,7 +29,8 @@
   - extended
   - shittersafari
   name: extended-title
-  showInVote: false #2boring2vote
+  showInVote: true
+  maxPlayers: 5
   description: extended-description
   rules:
   - BasicStationEventScheduler
@@ -42,7 +43,8 @@
   - greenshift
   - shittersafarideluxeedition
   name: greenshift-title
-  showInVote: false #4boring4vote
+  showInVote: true
+  maxPlayers: 3
   description: greenshift-description
   rules:
   - BasicRoundstartVariation
@@ -83,8 +85,8 @@
     - sandbox
   name: sandbox-title
   description: sandbox-description
-  showInVote: false # Not suitable for use without admin intervention, since entity spamming can quickly crash a server
-  maxPlayers: 5
+  showInVote: true
+  maxPlayers: 2
   rules:
     - Sandbox
 
@@ -109,7 +111,7 @@
     - dm
   name: death-match-title
   description: death-match-description
-  showInVote: true
+  showInVote: false
   supportedMaps: DeathMatchMapPool
   rules:
     - DeathMatch31
