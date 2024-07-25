@@ -5,6 +5,7 @@ using Content.Server.Station.Components;
 using Content.Shared.CCVar;
 using Content.Shared.FixedPoint;
 using Content.Shared.GameTicking;
+using Content.Server.GameTicking.Rules;
 using Content.Shared.Preferences;
 using Content.Shared.Roles;
 using JetBrains.Annotations;
@@ -27,6 +28,7 @@ public sealed partial class StationJobsSystem : EntitySystem
     [Dependency] private readonly IRobustRandom _random = default!;
     [Dependency] private readonly GameTicker _gameTicker = default!;
     [Dependency] private readonly IPlayerManager _playerManager = default!;
+    [Dependency] private readonly AllCaptainsRuleSystem _allCaptainsRule = default!;
 
     /// <inheritdoc/>
     public override void Initialize()
@@ -36,6 +38,8 @@ public sealed partial class StationJobsSystem : EntitySystem
         SubscribeLocalEvent<StationJobsComponent, StationRenamedEvent>(OnStationRenamed);
         SubscribeLocalEvent<StationJobsComponent, ComponentShutdown>(OnStationDeletion);
         SubscribeLocalEvent<PlayerJoinedLobbyEvent>(OnPlayerJoinedLobby);
+        SubscribeLocalEvent<GameRuleStartedEvent>(OnGameRuleStarted);
+        SubscribeLocalEvent<GameRuleEndedEvent>(OnGameRuleEnded);
         Subs.CVar(_configurationManager, CCVars.GameDisallowLateJoins, _ => UpdateJobsAvailable(), true);
     }
 
@@ -150,6 +154,9 @@ public sealed partial class StationJobsSystem : EntitySystem
 
         var jobList = stationJobs.JobList;
 
+        if (_allCaptainsRule != null && _allCaptainsRule.RuleStarted)
+           jobList = _allCaptainsRule.GetJobs(station).JobList;
+
         // This should:
         // - Return true when zero slots are added/removed.
         // - Return true when you add.
@@ -245,6 +252,11 @@ public sealed partial class StationJobsSystem : EntitySystem
             throw new ArgumentException("Tried to set a job to have a negative number of slots!", nameof(amount));
 
         var jobList = stationJobs.JobList;
+
+        // If all captains mode, override job list with the allcaptains job list -- prevents modifying the "real" job list
+        // in case mode changes later.
+        if (_allCaptainsRule != null && _allCaptainsRule.RuleStarted)
+           jobList = _allCaptainsRule.GetJobs(station).JobList;
 
         switch (jobList.ContainsKey(jobPrototypeId))
         {
