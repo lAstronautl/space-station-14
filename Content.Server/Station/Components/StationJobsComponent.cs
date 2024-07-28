@@ -1,5 +1,4 @@
 ﻿using System.Linq;
-﻿using Content.Server.GameTicking.Rules;
 using Content.Server.Station.Systems;
 using Content.Shared.Roles;
 using JetBrains.Annotations;
@@ -13,7 +12,7 @@ namespace Content.Server.Station.Components;
 /// <summary>
 /// Stores information about a station's job selection.
 /// </summary>
-[RegisterComponent, Access(typeof(StationJobsSystem), typeof(AllCaptainsRuleSystem)), PublicAPI]
+[RegisterComponent, Access(typeof(StationJobsSystem)), PublicAPI]
 public sealed partial class StationJobsComponent : Component
 {
     /// <summary>
