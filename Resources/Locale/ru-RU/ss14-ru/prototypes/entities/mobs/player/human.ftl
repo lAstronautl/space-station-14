@@ -15,5 +15,3 @@ ent-MobHumanArrivingAss = Прибывающий Ассистент
     .desc = { ent-MobHuman.desc }
 ent-MobHumanLoneNuclearOperative = Одинокий Оперативник
     .desc = { ent-MobHuman.desc }
-ent-MobHumanSpaceNinja = Космический Ниндзя
-    .desc = { ent-MobHuman.desc }

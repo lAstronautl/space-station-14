@@ -317,8 +317,20 @@
     sprayTimeAlive: 9.75
     transferAmount: 20
     impulse: 100.0
-  - type: FireExtinguisher
-    hasSafety: false
+  - type: ItemToggle
+    hasSafety: true
+    soundActivate:
+      path: /Audio/Machines/button.ogg
+      params:
+        variation: 0.125
+        volume: -4
+    soundDeactivate:
+      path: /Audio/Machines/button.ogg
+      params:
+        variation: 0.125
+        volume: -4
+  - type: ToggleVerb
+    text: fire-extinguisher-component-verb-text
   - type: Appearance
   - type: MechEquipment
   - type: UIFragment

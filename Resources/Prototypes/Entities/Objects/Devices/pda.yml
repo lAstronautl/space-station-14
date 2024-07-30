@@ -109,6 +109,9 @@
   id: BaseMedicalPDA
   abstract: true
   components:
+  - type: ItemToggle
+    toggleLight: false
+    onUse: false
   - type: HealthAnalyzer
     scanDelay: 1
     scanningEndSound:
@@ -750,6 +753,7 @@
     scanDelay: 0
   - type: CartridgeLoader
     uiKey: enum.PdaUiKey.Key
+    notificationsEnabled: false
     preinstalled:
       - CrewManifestCartridge
       - NotekeeperCartridge

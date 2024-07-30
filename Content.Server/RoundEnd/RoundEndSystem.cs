@@ -190,8 +190,13 @@ namespace Content.Server.RoundEnd
                 Color.Gold);
 
             // Custom sound for auto-called
-            if (!_autoCalledBefore) _audio.PlayGlobal("/Audio/Announcements/shuttlecalled.ogg", Filter.Broadcast(), true, AudioParams.Default.AddVolume(-4)); // Starshine-Announcements
-            else _audio.PlayGlobal("/Audio/Starshine/Announcements/crew_s_called.ogg", Filter.Broadcast(), true, AudioParams.Default.AddVolume(-4)); // Starshine-Announcements
+            _audio.PlayGlobal(
+                !_autoCalledBefore
+                    ? "/Audio/Announcements/shuttlecalled.ogg"
+                    : "/Audio/Starshine/Announcements/crew_s_called.ogg", // Starshine-Announcements
+                Filter.Broadcast(),
+                true,
+                AudioParams.Default.AddVolume(-4)); // Starshine-Announcements
 
             LastCountdownStart = _gameTiming.CurTime;
             ExpectedCountdownEnd = _gameTiming.CurTime + countdownTime;
@@ -239,7 +244,7 @@ namespace Content.Server.RoundEnd
             _chatSystem.DispatchGlobalAnnouncement(Loc.GetString("round-end-system-shuttle-recalled-announcement"),
                 Loc.GetString("Station"), false, colorOverride: Color.Gold);
 
-            _audio.PlayGlobal("/Audio/Announcements/shuttlerecalled.ogg", Filter.Broadcast(), true);
+            _audio.PlayGlobal("/Audio/Announcements/shuttlerecalled.ogg", Filter.Broadcast(), true, AudioParams.Default.AddVolume(-4)); // Starshine-Announcements: Decrease volume
 
             LastCountdownStart = null;
             ExpectedCountdownEnd = null;
@@ -361,8 +366,8 @@ namespace Content.Server.RoundEnd
             {
                 if (!_shuttle.EmergencyShuttleArrived && ExpectedCountdownEnd is null)
                 {
+                    _autoCalledBefore = true; // Starshine-Announcements: Move before call RequestRoundEnd to play correct announcement sound type
                     RequestRoundEnd(null, false, "round-end-system-shuttle-auto-called-announcement");
-                    _autoCalledBefore = true;
                 }
 
                 // Always reset auto-call in case of a recall.

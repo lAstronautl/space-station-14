@@ -17,6 +17,7 @@ chat-manager-no-radio-key = Префикс канала не указан!
 chat-manager-no-such-channel = Нет канала с префиксом '{ $key }'!
 chat-manager-whisper-headset-on-message = Вы не можете шептать в радио!
 chat-manager-server-wrap-message = СЕРВЕР: [bold]{ $message }[/bold]
+chat-manager-sender-announcement = Центральное Командование
 chat-manager-sender-announcement-wrap-message = [font size=14][bold]Объявление { $sender }:[/font][font size=12]{ "\u000A" }{ $message }[/bold][/font]
 chat-manager-entity-say-wrap-message = [BubbleHeader][bold][Name]{ $entityName }[/Name][/bold][/BubbleHeader] { $verb }, [font={ $fontType } size={ $fontSize }]"[BubbleContent]{ $message }[/BubbleContent]"[/font]
 chat-manager-entity-say-bold-wrap-message = [BubbleHeader][bold][Name]{ $entityName }[/Name][/bold][/BubbleHeader] { $verb }, [font={ $fontType } size={ $fontSize }]"[BubbleContent][bold]{ $message }[/bold][/BubbleContent]"[/font]

@@ -11,7 +11,7 @@ namespace Content.Server.Stunnable.Systems
     public sealed class PolicebatonSystem : SharedPolicebatonSystem
     {
         [Dependency] private readonly SharedItemSystem _item = default!;
-        [Dependency] private readonly SharedItemToggleSystem _itemToggle = default!;
+        [Dependency] private readonly ItemToggleSystem _itemToggle = default!;
 
         public override void Initialize()
         {
@@ -24,11 +24,9 @@ namespace Content.Server.Stunnable.Systems
 
         private void OnStaminaHitAttempt(Entity<PolicebatonComponent> entity, ref StaminaDamageOnHitAttemptEvent args)
         {
-            if (!_itemToggle.IsActivated(entity.Owner))
-            {
-                args.Cancelled = true;
+            if (_itemToggle.IsActivated(entity.Owner))
                 return;
-            }
+            args.Cancelled = true;
         }
 
         private void OnExamined(Entity<PolicebatonComponent> entity, ref ExaminedEvent args)

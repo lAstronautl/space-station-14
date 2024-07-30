@@ -71,7 +71,7 @@ public sealed class EmergencyLightSystem : SharedEmergencyLightSystem
             args.PushMarkup(
                 Loc.GetString("emergency-light-component-on-examine-alert",
                     ("color", color.ToHex()),
-                    ("level", name)));
+                    ("level", Loc.GetString($"alert-level-{name.ToString().ToLower()}"))));
         }
     }
 
@@ -235,6 +235,6 @@ public sealed class EmergencyLightSystem : SharedEmergencyLightSystem
         _pointLight.SetColor(entity.Owner, color);
         _appearance.SetData(entity.Owner, EmergencyLightVisuals.Color, color);
         _appearance.SetData(entity.Owner, EmergencyLightVisuals.On, true);
-        _ambient.SetAmbience(entity.Owner, true); 
+        _ambient.SetAmbience(entity.Owner, true);
     }
 }

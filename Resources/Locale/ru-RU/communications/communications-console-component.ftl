@@ -5,6 +5,7 @@ comms-console-menu-announcement-button = Сделать объявление
 comms-console-menu-broadcast-button = Вещать
 comms-console-menu-call-shuttle = Вызвать эвакуационный шаттл
 comms-console-menu-recall-shuttle = Отозвать эвакуационный шаттл
+comms-console-menu-time-remaining = Оставшееся время: { $time }
 # Popup
 comms-console-permission-denied = В доступе отказано
 comms-console-shuttle-unavailable = Шаттл в настоящее время недоступен

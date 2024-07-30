@@ -22,7 +22,7 @@
 [textlink="Нажмите здесь, чтобы посмотреть список технологий." link="Technologies"].
 
 ## Дисциплины
-Технологии распределены по 5 различным дисциплинам:
+Технологии распределены по 4 различным дисциплинам:
   <Box>
     <GuideEntityEmbed Entity="Wrench" Caption="Industrial"/>
     <GuideEntityEmbed Entity="WeaponTetherGun" Caption="Experimental"/>
