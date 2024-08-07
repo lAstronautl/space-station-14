@@ -36,8 +36,6 @@
       color: white
       netsync: false
     - type: Appearance
-    - type: ItemToggleDisarmMalus
-      activatedDisarmMalus: 0.7
     - type: Wieldable
     - type: ToggleableLightVisuals
       spriteLayer: blade
@@ -95,8 +93,6 @@
         path: /Audio/Weapons/ebladehum.ogg
     - type: ItemToggleSize
       activatedSize: Huge
-    - type: ItemToggleDisarmMalus
-      activatedDisarmMalus: 0.6
     - type: Sprite
       sprite: Objects/Weapons/Melee/e_shield.rsi
       layers:
