@@ -99,3 +99,26 @@
   - type: Storage
     storageOpenSound:
       collection: WeaponCaseOpen
+
+- type: entity
+  name: portable artifact ñontainer
+  parent: BriefcaseBrown
+  id: BriefcaseArtifactContainer
+  description: A handy briefcase.
+  components:
+  - type: Sprite
+    sprite: Objects/Storage/Briefcases/anomaly_briefcase.rsi
+    state: icon
+  - type: SuppressArtifactContainer
+  - type: RadiationBlockingContainer
+    resistance: 5
+  - type: Item
+    size: Huge
+    sprite: Objects/Storage/Briefcases/anomaly_briefcase.rsi
+  - type: Storage
+    maxItemSize: Huge
+    grid:
+    - 0,0,1,1
+    storageOpenSound:
+      collection: WeaponCaseOpen
+
