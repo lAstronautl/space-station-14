@@ -31,9 +31,9 @@
 - type: cargoProduct
   id: PortableArtifactContainerCargo
   icon:
-    sprite: Objects/Storage/Briefcases/anomaly_briefcase.rsi
+    sprite: Objects/Storage/Briefcases/portable_artifact_container.rsi
     state: icon
   product: PortableArtifactContainer
-  cost: 350
+  cost: 500
   category: cargoproduct-category-name-science
   group: market

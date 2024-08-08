@@ -108,14 +108,14 @@
   description: A handy briefcase.
   components:
   - type: Sprite
-    sprite: Objects/Storage/Briefcases/anomaly_briefcase.rsi
+    sprite: Objects/Storage/Briefcases/portable_artifact_container.rsi
     state: icon
   - type: SuppressArtifactContainer
   - type: RadiationBlockingContainer
     resistance: 5
   - type: Item
     size: Huge
-    sprite: Objects/Storage/Briefcases/anomaly_briefcase.rsi
+    sprite: Objects/Storage/Briefcases/portable_artifact_container.rsi
   - type: Storage
     maxItemSize: Huge
     grid:
