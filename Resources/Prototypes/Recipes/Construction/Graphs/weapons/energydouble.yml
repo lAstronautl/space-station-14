@@ -1,0 +1,25 @@
+- type: constructionGraph
+  id: EnergyDouble
+  start: start
+  graph:
+    - node: start
+      edges:
+        - to: energydouble
+          steps:
+            - tag: EnergySwordCraft
+              doAfter: 2
+    - node: energydouble
+      entity: EnergySwordDouble
+
+    - node: energydouble
+      entity: EnergySwordDouble
+      edges:
+        - to: start
+          steps:
+            - tool: Screwing
+              doAfter: 4
+          completed:
+            - !type:SpawnPrototype
+              prototype: EnergySword
+              amount: 2
+            - !type:DeleteEntity

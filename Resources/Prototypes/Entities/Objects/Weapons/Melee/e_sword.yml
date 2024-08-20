@@ -67,6 +67,13 @@
     color: white
     netsync: false
   - type: Appearance
+  - type: Construction
+    graph: EnergyDouble
+    node: start
+    deconstructionTarget: null
+  - type: Tag
+    tags:
+    - EnergySwordCraft
   - type: ToggleableLightVisuals
     spriteLayer: blade
     inhandVisuals:
@@ -259,6 +266,7 @@
       types:
         Blunt: 4.5
   - type: Sprite
+    deconstructionTarget: null
     sprite: Objects/Weapons/Melee/e_sword_double.rsi
     layers:
       - state: e_sword_double

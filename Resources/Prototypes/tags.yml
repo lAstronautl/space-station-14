@@ -594,6 +594,9 @@
   id: EmagImmune
 
 - type: Tag
+  id: EnergySwordCraft
+
+- type: Tag
   id: EmitterBolt
 
 - type: Tag
