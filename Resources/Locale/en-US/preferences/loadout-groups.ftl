@@ -14,6 +14,9 @@ loadout-group-survival-security = Security Survival Box
 loadout-group-survival-syndicate = Github is forcing me to write text that is literally twice-impossible for the player to ever see, send help
 loadout-group-breath-tool = Species-dependent breath tools
 loadout-group-tank-harness = Species-specific survival equipment
+loadout-group-EVA-tank = Species-specific gas tank
+loadout-group-pocket-tank-double = Species-specific double emergency tank in pocket
+loadout-group-survival-mime = Mime Survival Box
 
 # CentCom
 loadout-group-consultant-head = Consultant head
@@ -47,6 +50,7 @@ loadout-group-passenger-mask = Passenger mask
 loadout-group-passenger-gloves = Passenger gloves
 loadout-group-passenger-outerclothing = Passenger outer clothing
 loadout-group-passenger-shoes = Passenger shoes
+loadout-group-passenger-neck = Passenger neck
 
 loadout-group-bartender-head = Bartender head
 loadout-group-bartender-jumpsuit = Bartender jumpsuit
@@ -90,6 +94,7 @@ loadout-group-mime-mask = Mime mask
 loadout-group-mime-jumpsuit = Mime jumpsuit
 loadout-group-mime-backpack = Mime backpack
 loadout-group-mime-outerclothing = Mime outer clothing
+loadout-group-mime-belt = Mime belt
 
 loadout-group-musician-jumpsuit = Musician jumpsuit
 loadout-group-musician-outerclothing = Musician outer clothing
@@ -180,6 +185,7 @@ loadout-group-brigmedic-backpack = Brigmedic backpack
 loadout-group-brigmedic-outerclothing = Brigmedic outer clothing
 
 loadout-group-security-cadet-jumpsuit = Security cadet jumpsuit
+loadout-group-security-star = Security Star
 
 # Medical
 loadout-group-medical-gloves = Medical gloves
@@ -211,6 +217,8 @@ loadout-group-paramedic-shoes = Paramedic shoes
 
 # Wildcards
 loadout-group-reporter-jumpsuit = Reporter jumpsuit
+
+loadout-group-psychologist-jumpsuit = Psychologist jumpsuit
 
 loadout-group-boxer-jumpsuit = Boxer jumpsuit
 loadout-group-boxer-gloves = Boxer gloves

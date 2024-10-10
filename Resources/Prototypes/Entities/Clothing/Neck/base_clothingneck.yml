@@ -38,7 +38,7 @@
   components:
   - type: Tag
     tags:
+    - Scarf
     - Clothing
     - ClothMade
-    - Scarf
     - WhitelistChameleon

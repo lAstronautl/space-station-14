@@ -11,12 +11,8 @@
 # Coats
 - type: loadout
   id: HeadofSecurityHonoraryTrench
-  equipment: HeadofSecurityHonoraryTrench
   effects:
   - !type:GroupLoadoutEffect
     proto: HoSHonoraryTrenchTimer
-
-- type: startingGear
-  id: HeadofSecurityHonoraryTrench
   equipment:
     outerClothing: ClothingOuterCoatHoSHonoraryTrench

@@ -5,6 +5,7 @@
   description: A robust bag for salvage specialists and miners alike to carry large amounts of ore. Magnetises any nearby ores when attached to a belt.
   components:
   - type: MagnetPickup
+    slotFlags: POCKET ## Starshine
   - type: Sprite
     sprite: Objects/Specific/Mining/ore_bag.rsi
     state: icon
@@ -14,7 +15,9 @@
     slots:
     - belt
   - type: Item
-    size: Ginormous
+    size: Small
+    shape:
+    - 0,0,2,2 ## Starshine
   - type: Storage
     maxItemSize: Normal
     grid:
@@ -25,4 +28,5 @@
       tags:
         - ArtifactFragment
         - Ore
+        - TreasureCoin ## Starshine
   - type: Dumpable

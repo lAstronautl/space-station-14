@@ -11,8 +11,6 @@
     sprite: Clothing/Hands/Gloves/Modsuit/standard.rsi
     equipSound: /Audio/Items/ballin.ogg
     unequipSound: /Audio/Items/ballout.ogg
-  - type: GloveHeatResistance
-    heatResistance: 1400
   - type: Insulated
   - type: Fiber
     fiberMaterial: fibers-durathread

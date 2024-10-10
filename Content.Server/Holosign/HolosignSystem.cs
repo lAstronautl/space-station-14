@@ -1,18 +1,18 @@
 using Content.Shared.Examine;
 using Content.Server.DoAfter;
 using Content.Server.Popups;
+using Content.Server.Power.EntitySystems;
 using Content.Shared.Destructible;
 using Content.Shared.Coordinates.Helpers;
-using Content.Server.Power.Components;
 using Content.Server.PowerCell;
 using Content.Shared.Interaction;
 using Content.Shared.Storage;
-using Content.Shared.PowerCell.Components;
 using Content.Shared.Interaction.Events;
-using Robust.Shared.Timing;
+using Content.Shared.Popups;
+using Content.Shared.PowerCell;
 using Content.Shared.Verbs;
-using Robust.Shared.Prototypes;
-using Robust.Shared.Player;
+using Robust.Shared.Audio;
+using Robust.Shared.Audio.Systems;
 using Robust.Shared.Utility;
 
 
@@ -24,7 +24,9 @@ namespace Content.Server.Holosign
         [Dependency] private readonly PopupSystem _popupSystem = default!;
         [Dependency] private readonly IEntityManager _entManager = default!;
         [Dependency] private readonly PowerCellSystem _powerCell = default!;
+        [Dependency] private readonly BatterySystem _battery = default!;
         [Dependency] private readonly SharedTransformSystem _transform = default!;
+        [Dependency] private readonly SharedAudioSystem _audio = default!;
 
         public override void Initialize()
         {
@@ -35,6 +37,7 @@ namespace Content.Server.Holosign
             SubscribeLocalEvent<HolosignProjectorComponent, ExaminedEvent>(OnExamine);
             SubscribeLocalEvent<HolosignProjectorComponent, ComponentRemove>(OnRemove);
             SubscribeLocalEvent<HolosignProjectorComponent, GetVerbsEvent<Verb>>(AddClearVerb);
+            SubscribeLocalEvent<HolosignProjectorComponent, PowerCellSlotEmptyEvent>(OnOutOfPower);
             SubscribeLocalEvent<HolosignBarrierComponent, ComponentRemove>(OnChildRemove);
             SubscribeLocalEvent<HolosignBarrierComponent, DestructionEventArgs>(OnChildDestroyed);
         }
@@ -48,7 +51,7 @@ namespace Content.Server.Holosign
             }
 
             // Not a holosign or holosign what put on map by mapper.
-            if((args.Target == null) || !EntityManager.TryGetComponent(args.Target.Value, out HolosignBarrierComponent? holosigncomponent))
+            if(args.Target == null || !EntityManager.TryGetComponent(args.Target.Value, out HolosignBarrierComponent? holosigncomponent))
             {
                 return;
             }
@@ -62,6 +65,7 @@ namespace Content.Server.Holosign
             // Would be fun see removing holoprojection without holosign component.
             _entManager.DeleteEntity(args.Target.Value);
             _popupSystem.PopupEntity(Loc.GetString("holoprojector-component-holosign-removed"), args.User, args.User);
+            UpdateCellDrawState(uid, component, component.Childs.Count != 0);
 
             args.Handled = true;
         }
@@ -71,7 +75,14 @@ namespace Content.Server.Holosign
             if (args.Handled)
                 return;
 
-            ClearHolosignsVerb(uid, component, args.User);
+            if (component.Childs.Count == 0)
+            {
+                _popupSystem.PopupEntity(Loc.GetString("holoprojector-component-holosigns-none"), args.User, args.User);
+                return;
+            }
+
+            ClearHolosignsVerb(uid, component);
+            _popupSystem.PopupEntity(Loc.GetString("holoprojector-component-holosigns-cleared"), args.User, args.User);
 
             args.Handled = true;
         }
@@ -83,9 +94,9 @@ namespace Content.Server.Holosign
             args.PushMarkup(Loc.GetString("holoprojector-component-examine", ("amount", childs), ("max", max)));
         }
 
-        private void ClearHolosignsVerb(EntityUid uid, HolosignProjectorComponent component, EntityUid player)
+        private void ClearHolosignsVerb(EntityUid uid, HolosignProjectorComponent component)
         {
-            _popupSystem.PopupEntity(Loc.GetString("holoprojector-component-holosigns-cleared"), player, player);
+            UpdateCellDrawState(uid, component, false);
 
             // Should be cleared by OnChildRemove event?
             foreach (var child in component.Childs.ToArray())
@@ -95,6 +106,34 @@ namespace Content.Server.Holosign
                     _entManager.DeleteEntity(child);
                 }
             }
+        }
+
+        private void UpdateCellDrawState(EntityUid uid, HolosignProjectorComponent component, bool activated)
+        {
+            var drawComp = Comp<PowerCellDrawComponent>(uid);
+            drawComp.DrawRate = component.DrawRatePerHolo * component.Childs.Count;
+            _powerCell.QueueUpdate((uid, drawComp));
+            _powerCell.SetDrawEnabled((uid, drawComp), activated);
+        }
+
+        private void OnOutOfPower(Entity<HolosignProjectorComponent> entity, ref PowerCellSlotEmptyEvent args)
+        {
+            if (entity.Comp.Childs.Count == 0)
+                return;
+
+            if (_powerCell.TryGetBatteryFromSlot(entity.Owner, out var battery))
+            {
+                var drawComp = Comp<PowerCellDrawComponent>(entity.Owner);
+                if (!_powerCell.TryUseCharge(entity.Owner, drawComp.DrawRate))
+                    _battery.SetCharge(entity.Owner, 0, battery);
+            }
+
+            ClearHolosignsVerb(entity.Owner, entity.Comp);
+            _audio.PlayPvs(_audio.GetSound(new SoundPathSpecifier("/Audio/Machines/buzz-two.ogg")), entity.Owner);
+            _popupSystem.PopupPredicted(Loc.GetString("holoprojector-component-oop"),
+                entity.Owner,
+                null,
+                PopupType.SmallCaution);
         }
 
         private void OnRemove(EntityUid uid, HolosignProjectorComponent component, ComponentRemove args)
@@ -113,18 +152,18 @@ namespace Content.Server.Holosign
             if (!args.CanAccess || !args.CanInteract)
                 return;
 
-            if(component.Childs.Count > 0)
+            if (component.Childs.Count == 0)
+                return;
+
+            Verb clear = new ()
             {
-                Verb clear = new ()
-                {
-             	    Act = () => ClearHolosignsVerb(uid, component, args.User),
-                    Text = Loc.GetString("holoprojector-component-verb-clear"),
-                    Icon = new SpriteSpecifier.Texture(new ResPath("/Textures/Interface/VerbIcons/rotate_cw.svg.192dpi.png")),
-                    Priority = 1,
-                    CloseMenu = true, // allow for easy double rotations.
-                };
-                args.Verbs.Add(clear);
-            }
+                Act = () => ClearHolosignsVerb(uid, component),
+                Text = Loc.GetString("holoprojector-component-verb-clear"),
+                Icon = new SpriteSpecifier.Texture(new ResPath("/Textures/Interface/VerbIcons/rotate_cw.svg.192dpi.png")),
+                Priority = 1,
+                CloseMenu = true, // allow for easy double rotations.
+            };
+            args.Verbs.Add(clear);
         }
 
         private void OnChildRemove(EntityUid uid, HolosignBarrierComponent component, ComponentRemove args)
@@ -133,10 +172,11 @@ namespace Content.Server.Holosign
                 return;
 
             // Holoprojector without Holoprojector component. BRUH
-            if(EntityManager.TryGetComponent(component.Holoprojector, out HolosignProjectorComponent? holoprojector))
-            {
-                holoprojector.Childs.Remove(uid);
-            }
+            if (!EntityManager.TryGetComponent(component.Holoprojector, out HolosignProjectorComponent? holoprojector))
+                return;
+
+            holoprojector.Childs.Remove(uid);
+            UpdateCellDrawState(component.Holoprojector, holoprojector, holoprojector.Childs.Count != 0);
         }
 
         private void OnChildDestroyed(EntityUid uid, HolosignBarrierComponent component, DestructionEventArgs args)
@@ -145,10 +185,11 @@ namespace Content.Server.Holosign
                 return;
 
             // Holoprojector without Holoprojector component. BRUH
-            if(EntityManager.TryGetComponent(component.Holoprojector, out HolosignProjectorComponent? holoprojector))
-            {
-                holoprojector.Childs.Remove(uid);
-            }
+            if (!EntityManager.TryGetComponent(component.Holoprojector, out HolosignProjectorComponent? holoprojector))
+                return;
+
+            holoprojector.Childs.Remove(uid);
+            UpdateCellDrawState(component.Holoprojector, holoprojector, holoprojector.Childs.Count != 0);
         }
         private void OnBeforeInteract(EntityUid uid, HolosignProjectorComponent component, BeforeRangedInteractEvent args)
         {
@@ -159,6 +200,22 @@ namespace Content.Server.Holosign
                 || HasComp<HolosignBarrierComponent>(args.Target)
                )
                 return;
+
+            if (!_powerCell.TryGetBatteryFromSlot(uid, out _))
+            {
+                _popupSystem.PopupEntity(Loc.GetString("handheld-light-component-cell-missing-message"),
+                    args.User,
+                    args.User);
+                return;
+            }
+
+            if (!_powerCell.TryUseCharge(uid, component.DrawRatePerHolo))
+            {
+                _popupSystem.PopupEntity(Loc.GetString("handheld-light-component-cell-dead-message"),
+                    args.User,
+                    args.User);
+                return;
+            }
 
             if(component.Childs.Count >= component.MaxSigns)
             {
@@ -179,6 +236,7 @@ namespace Content.Server.Holosign
                 var holoComp = _entManager.AddComponent<HolosignBarrierComponent>(holoUid);
                 holoComp.Holoprojector = uid;
                 component.Childs.Add(holoUid);
+                UpdateCellDrawState(uid, component, component.Childs.Count != 0);
 
                 args.Handled = true;
             }

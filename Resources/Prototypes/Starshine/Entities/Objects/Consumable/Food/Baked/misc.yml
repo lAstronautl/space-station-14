@@ -5,7 +5,6 @@
   description: A mothroach roast. You're proud of yourself now, aren't you?
   components:
   - type: Food
-    trash: FoodPlate
   - type: FlavorProfile
     flavors:
       - meaty

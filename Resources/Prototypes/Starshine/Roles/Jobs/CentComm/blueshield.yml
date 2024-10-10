@@ -1,0 +1,54 @@
+- type: job
+  id: BlueShield
+  name: job-name-blueshield
+  description: job-description-blueshield
+  playTimeTracker: JobBlueShield
+  requirements:
+    - !type:RoleTimeRequirement
+      role: JobCaptain
+      time: 54000 #15 hrs
+    - !type:RoleTimeRequirement
+      role: JobHeadOfSecurity
+      time: 36000 #10 hrs
+    - !type:RoleTimeRequirement
+      role: JobChiefMedicalOfficer
+      time: 18000 #5 hrs
+  weight: 20
+  startingGear: BlueShieldGear
+  icon: "JobIconBlueShield"
+  requireAdminNotify: true
+  joinNotifyCrew: true
+  supervisors: job-supervisors-centcom-consultant
+  canBeAntag: false
+  access:
+  - Captain
+  - Command
+  - Medical
+  - Engineering
+  - External
+  - Security
+  - Brig
+  - Maintenance
+  - Cargo
+  - Research
+  - CentralCommand
+  - Cryogenics
+  special:
+  - !type:AddImplantSpecial
+    implants: [ MindShieldImplant ]
+  - !type:AddComponentSpecial
+    components:
+      - type: CommandStaff
+
+- type: startingGear
+  id: BlueShieldGear
+  equipment:
+    shoes: ClothingShoesBootsCombatFilled
+    eyes: ClothingEyesGlassesCommand
+    belt: ClothingBeltMedSec
+    gloves: ClothingHandsTacticalBlueShield
+    id: BlueShieldPDA
+    ears: ClothingHeadsetAltBlueShield
+  storage:
+    back:
+    - BoxSurvivalBlueShield

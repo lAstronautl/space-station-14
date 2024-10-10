@@ -92,17 +92,6 @@
   categories:
   - UplinkWeaponry
 
-
-- type: listing
-  id: UplinkClothingOuterVestWeb
-  name: uplink-clothing-outer-vest-web-name
-  description: uplink-clothing-outer-vest-web-desc
-  productEntity: ClothingOuterVestWeb
-  cost:
-    Telecrystal: 5
-  categories:
-  - UplinkWearables
-
 - type: listing
   id: UplinkClothingEyesVision
   name: uplink-clothing-pnv-name

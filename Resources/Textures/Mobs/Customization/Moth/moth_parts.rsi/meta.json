@@ -32,30 +32,6 @@
       "directions": 4
     },
     {
-      "name": "reddish_head",
-      "directions": 4
-    },
-    {
-      "name": "reddish_chest",
-      "directions": 4
-    },
-    {
-      "name": "reddish_r_arm",
-      "directions": 4
-    },
-    {
-      "name": "reddish_l_arm",
-      "directions": 4
-    },
-    {
-      "name": "reddish_r_leg",
-      "directions": 4
-    },
-    {
-      "name": "reddish_l_leg",
-      "directions": 4
-    },
-    {
       "name": "gothic_head",
       "directions": 4
     },
@@ -176,27 +152,27 @@
       "directions": 4
     },
     {
-      "name": "poison_head",
+      "name": "fan_head",
       "directions": 4
     },
     {
-      "name": "poison_chest",
+      "name": "fan_chest",
       "directions": 4
     },
     {
-      "name": "poison_r_arm",
+      "name": "fan_r_arm",
       "directions": 4
     },
     {
-      "name": "poison_l_arm",
+      "name": "fan_l_arm",
       "directions": 4
     },
     {
-      "name": "poison_r_leg",
+      "name": "fan_r_leg",
       "directions": 4
     },
     {
-      "name": "poison_l_leg",
+      "name": "fan_l_leg",
       "directions": 4
     },
     {
@@ -320,27 +296,27 @@
       "directions": 4
     },
     {
-      "name": "lovers_head",
+      "name": "pointy_head",
       "directions": 4
     },
     {
-      "name": "lovers_chest",
+      "name": "pointy_chest",
       "directions": 4
     },
     {
-      "name": "lovers_r_arm",
+      "name": "pointy_r_arm",
       "directions": 4
     },
     {
-      "name": "lovers_l_arm",
+      "name": "pointy_l_arm",
       "directions": 4
     },
     {
-      "name": "lovers_r_leg",
+      "name": "pointy_r_leg",
       "directions": 4
     },
     {
-      "name": "lovers_l_leg",
+      "name": "pointy_l_leg",
       "directions": 4
     }
   ]

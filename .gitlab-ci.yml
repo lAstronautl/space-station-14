@@ -6,6 +6,8 @@ stages:
 
 test-debug:
   stage: test
+  tags:
+    - shared
   script:
     - mkdir .git/hooks -p
     - python3 RUN_THIS.py
@@ -17,6 +19,8 @@ test-debug:
 
 publish:
   stage: publish
+  tags:
+    - shared
   interruptible: true
   only:
     - schedules
@@ -42,6 +46,8 @@ publish:
 
 publish-artifact:
   stage: publish
+  tags:
+    - shared
   interruptible: true
   except:
     - schedules

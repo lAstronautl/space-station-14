@@ -122,6 +122,17 @@ namespace Content.Server.Flash
             if (attempt.Cancelled)
                 return;
 
+            if (TryComp<FlashableModifierComponent>(target, out var flashModComp))
+            {
+                flashDuration *= flashModComp.DurationMultiplier;
+                slowTo *= flashModComp.SlowdownMultiplier;
+                if (stunDuration.HasValue)
+                {
+                    stunDuration =
+                        TimeSpan.FromTicks((long)(stunDuration.Value.Ticks * flashModComp.StunDurationMultiplier));
+                }
+            }
+
             // don't paralyze, slowdown or convert to rev if the target is immune to flashes
             if (!_statusEffectsSystem.TryAddStatusEffect<FlashedComponent>(target, FlashedKey, TimeSpan.FromSeconds(flashDuration / 1000f), true))
                 return;
@@ -152,7 +163,7 @@ namespace Content.Server.Flash
             }
         }
 
-        public void FlashArea(Entity<FlashComponent?> source, EntityUid? user, float range, float duration, float slowTo = 0.8f, bool displayPopup = false, float probability = 1f, SoundSpecifier? sound = null)
+        public override void FlashArea(Entity<FlashComponent?> source, EntityUid? user, float range, float duration, float slowTo = 0.8f, bool displayPopup = false, float probability = 1f, SoundSpecifier? sound = null)
         {
             var transform = Transform(source);
             var mapPosition = _transform.GetMapCoordinates(transform);

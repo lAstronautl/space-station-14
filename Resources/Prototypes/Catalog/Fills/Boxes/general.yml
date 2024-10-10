@@ -357,7 +357,7 @@
 
 - type: entity
   name: syndicate encryption key box
-  parent: BoxEncryptionKeyPassenger
+  parent: [BoxEncryptionKeyPassenger, BaseSyndicateContraband]
   id: BoxEncryptionKeySyndie
   description: Two syndicate encryption keys for the price of one. Miniaturized for ease of use.
   components:
@@ -449,28 +449,17 @@
       - id: DartYellow
         amount: 2
 
-## Starshine
-
 - type: entity
-  name: miner artifact
+  name: envelope box
   parent: BoxCardboard
-  id: BoxArtifactMiners
-  description: This box is filled with mousetraps. Try not to get your hand stuck in one.
+  id: BoxEnvelope
+  description: A box filled with envelopes.
   components:
-    - type: Sprite
-      layers:
-        - state: box_of_doom
-        - state: heart_black
-
-- type: entity
-  name: box of magazines
-  parent: BoxArtifactMiners
-  id: BoxCursedKatana
-  description: A box full of medpens.
-  components:
+  - type: Sprite
+    layers:
+      - state: box
+      - state: envelope
   - type: StorageFill
     contents:
-      - id: KatanacursedShard
-      - id: ClothingOuterDogi
-  - type: Storage
-    maxItemSize: Normal
+      - id: Envelope
+        amount: 9

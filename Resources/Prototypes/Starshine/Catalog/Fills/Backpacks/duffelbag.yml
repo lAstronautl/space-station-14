@@ -1,0 +1,47 @@
+- type: entity
+  parent: ClothingBackpackDuffelSyndicateAmmo
+  id: ClothingBackpackDuffelSyndicateAmmoPistolFilled
+  name: ammo bundle
+  description: "Reloading! Contains 4 magazines for the C-20r, 4 drums for the Bulldog, and 2 ammo boxes for the L6 SAW."
+  components:
+  - type: StorageFill
+    contents:
+      - id: MagazinePistolHighCapacity
+        amount: 4
+
+- type: entity
+  parent: ClothingBackpackDuffelSyndicateAmmo
+  id: ClothingBackpackDuffelSyndicateAmmoPistolSubMachineGunBundle
+  name: ammo bundle
+  description: "Reloading! Contains 4 magazines for the C-20r, 4 drums for the Bulldog, and 2 ammo boxes for the L6 SAW."
+  components:
+  - type: StorageFill
+    contents:
+      - id: MagazinePistolSubMachineGun
+        amount: 4
+
+- type: entity
+  parent: ClothingBackpackDuffelSyndicateAmmo
+  id: ClothingBackpackDuffelSyndicateAmmoShotGunBundle
+  name: ammo bundle
+  description: "Reloading! Contains 4 magazines for the C-20r, 4 drums for the Bulldog, and 2 ammo boxes for the L6 SAW."
+  components:
+  - type: StorageFill
+    contents:
+      - id: MagazineShotgun
+        amount: 2
+      - id: MagazineShotgunSlug
+        amount: 2
+      - id: MagazineShotgunIncendiary
+        amount: 1
+
+- type: entity
+  parent: ClothingBackpackDuffelSyndicateAmmo
+  id: ClothingBackpackDuffelSyndicateAmmoCaselessRifleBundle
+  name: ammo bundle
+  description: "Reloading! Contains 4 magazines for the C-20r, 4 drums for the Bulldog, and 2 ammo boxes for the L6 SAW."
+  components:
+  - type: StorageFill
+    contents:
+      - id: MagazineCaselessRifle
+        amount: 4

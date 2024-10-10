@@ -1,0 +1,17 @@
+- type: playTimeTracker
+  id: JobCentComConsultant
+
+- type: playTimeTracker
+  id: JobCentralCommandIntern
+
+- type: playTimeTracker
+  id: JobCentralCommandInternLeader
+
+- type: playTimeTracker
+  id: JobBlueShield
+
+- type: playTimeTracker
+  id: JobMiner
+
+- type: playTimeTracker
+  id: JobShuttlePilot

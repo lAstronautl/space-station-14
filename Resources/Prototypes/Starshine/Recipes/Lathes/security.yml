@@ -21,3 +21,80 @@
   completetime: 10
   materials:
     Steel: 300
+
+- type: latheRecipe
+  id: WeaponLaserGun
+  result: WeaponLaserGun
+  completetime: 10
+  materials:
+    Steel: 1000
+    Glass: 500
+    Plastic: 500
+
+- type: latheRecipe
+  id: WeaponCutter
+  result: WeaponCutter
+  completetime: 10
+  materials:
+    Steel: 1000
+    Glass: 200
+    Silver: 100
+    Plasma: 400
+
+- type: latheRecipe
+  id: WeaponCutterAdv
+  result: WeaponCutterAdv
+  completetime: 15
+  materials:
+    Steel: 1200
+    Glass: 300
+    Gold: 100
+    Plasma: 800
+
+- type: latheRecipe
+  id: MagazinePistolSubMachineGunRubber
+  result: MagazinePistolSubMachineGunRubber
+  completetime: 5
+  materials:
+    Steel: 250
+    Plastic: 100
+
+- type: latheRecipe
+  id: MagazineBoxRifleBig
+  result: MagazineBoxRifleBig
+  completetime: 25
+  materials:
+    Steel: 3000
+
+- type: latheRecipe
+  id: MagazineBoxRifleRubber
+  result: MagazineBoxRifleRubber
+  category: Ammo
+  completetime: 5
+  materials:
+    Steel: 350
+    Plastic: 600
+
+- type: latheRecipe
+  id: BowCompound
+  result: BowCompound
+  completetime: 5
+  materials:
+    Steel: 1500
+    Plastic: 500
+
+- type: latheRecipe
+  id: ArrowCompound
+  result: ArrowCompound
+  completetime: 1
+  materials:
+    Steel: 150
+    Plastic: 50
+
+- type: latheRecipe
+  id: ClothingBeltQuiverComposit
+  result: ClothingBeltQuiverComposit
+  completetime: 5
+  materials:
+    Steel: 350
+    Plastic: 350

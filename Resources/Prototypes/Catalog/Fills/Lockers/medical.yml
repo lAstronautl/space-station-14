@@ -50,8 +50,6 @@
       - id: ClothingHandsGlovesLatex
       - id: ClothingHeadsetMedical
       - id: ClothingEyesHudMedical
-      - id: DnaSyringeGun
-      - id: ClothingBeltMedical
       - id: ClothingHeadHatSurgcapGreen
         prob: 0.1
         orGroup: Surgcaps
@@ -71,6 +69,7 @@
         prob: 0.05
         orGroup: Surgshrubs
       - id: ClothingMaskSterile
+      - id: DnaSyringeGun
 
 - type: entity
   parent: LockerWallMedical
@@ -85,8 +84,6 @@
       - id: ClothingHandsGlovesLatex
       - id: ClothingHeadsetMedical
       - id: ClothingEyesHudMedical
-      - id: DnaSyringeGun
-      - id: ClothingBeltMedical
       - id: ClothingHeadHatSurgcapGreen
         prob: 0.1
         orGroup: Surgcaps
@@ -106,6 +103,7 @@
         prob: 0.05
         orGroup: Surgshrubs
       - id: ClothingMaskSterile
+      - id: DnaSyringeGun
 
 - type: entity
   id: LockerChemistryFilled

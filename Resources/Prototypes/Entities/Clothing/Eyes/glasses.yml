@@ -126,7 +126,7 @@
         Blunt: 10
 
 - type: entity
-  parent: ClothingEyesBase
+  parent: [ClothingEyesBase, BaseEngineeringContraband]
   id: ClothingEyesGlassesMeson
   name: engineering goggles #less confusion
   description: Green-tinted goggles using a proprietary polymer that provides protection from eye damage of all types.
@@ -136,6 +136,8 @@
   - type: Clothing
     sprite: Clothing/Eyes/Glasses/meson.rsi
   - type: EyeProtection
+  - type: IdentityBlocker
+    coverage: EYES
 
 - type: entity
   parent: ClothingEyesBase
@@ -172,7 +174,7 @@
   parent: ClothingEyesBase
   id: ClothingEyesGlassesJamjar
   name: jamjar glasses
-  description: Also known as Virginity Protectors.
+  description: These retro glasses remind you of a simpler time.
   components:
   - type: Sprite
     sprite: Clothing/Eyes/Glasses/jamjar.rsi
@@ -232,23 +234,7 @@
     - WhitelistChameleon
 
 - type: entity
-  parent: [ClothingEyesGlassesSunglasses, ShowSecurityIcons]
-  id: ClothingEyesGlassesSunglassesBlueShield
-  name: sun glasses
-  description: Useful both for security and cargonia.
-  components:
-  - type: Sprite
-    sprite: Clothing/Eyes/Glasses/blueshieldglasses.rsi
-  - type: Clothing
-    sprite: Clothing/Eyes/Glasses/blueshieldglasses.rsi
-  - type: Tag
-    tags:
-    - Clothing
-    - HamsterWearable
-    - WhitelistChameleon
-
-- type: entity
-  parent: [ClothingEyesBase, ShowSecurityIcons]
+  parent: [ClothingEyesBase, ShowSecurityIcons, BaseRestrictedContraband]
   id: ClothingEyesGlassesSecurity
   name: security glasses
   description: Upgraded sunglasses that provide flash immunity and a security HUD.
@@ -271,8 +257,31 @@
   - type: GuideHelp
     guides:
     - Security
+    - Antagonists
   - type: IdentityBlocker
     coverage: EYES
+
+- type: entity
+  parent: [ClothingEyesBase, BaseCommandContraband]
+  id: ClothingEyesGlassesCommand
+  name: administration glasses
+  description: Upgraded sunglasses that provide flash immunity and show ID card status. 
+  components:
+  - type: Sprite
+    sprite: Clothing/Eyes/Glasses/commandglasses.rsi
+  - type: Clothing
+    sprite: Clothing/Eyes/Glasses/commandglasses.rsi
+  - type: FlashImmunity
+  - type: EyeProtection
+    protectionTime: 5
+  - type: Tag
+    tags:
+    - Clothing
+    - HamsterWearable
+    - WhitelistChameleon
+  - type: IdentityBlocker
+    coverage: EYES
+  - type: ShowJobIcons
 
 - type: entity
   parent: ClothingEyesBase
@@ -311,6 +320,8 @@
   - type: FlashImmunity
   - type: EyeProtection
     protectionTime: 5
+  - type: IdentityBlocker
+    coverage: EYES
 
 #Make a scanner category when these actually function and we get the trayson
 - type: entity
@@ -328,6 +339,8 @@
       coefficients:
         Heat: 0.95
   - type: GroupExamine
+  - type: IdentityBlocker
+    coverage: EYES
 
 - type: entity
   parent: ClothingEyesBase
@@ -340,9 +353,11 @@
     - type: Clothing
       sprite: Clothing/Eyes/Glasses/science.rsi
     - type: SolutionScanner
+    - type: IdentityBlocker
+      coverage: EYES
 
 - type: entity
-  parent: ClothingEyesBase
+  parent: [ClothingEyesBase, BaseMajorContraband]
   id: ClothingEyesVisorNinja
   name: ninja visor
   description: An advanced visor protecting a ninja's eyes from flashing lights.

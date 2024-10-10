@@ -40,6 +40,7 @@
         whitelist:
           tags:
             - MagazineLightRifle
+        whitelistFailPopup: gun-magazine-whitelist-fail
       gun_chamber:
         name: Chamber
         startingItem: CartridgeLightRifle
@@ -56,7 +57,7 @@
 
 - type: entity
   name: AKMS
-  parent: BaseWeaponRifle
+  parent: [BaseWeaponRifle, BaseRestrictedContraband]
   id: WeaponRifleAk
   description: An iconic weapon of war. Uses .30 rifle ammo.
   components:
@@ -85,6 +86,7 @@
         whitelist:
           tags:
             - MagazineLightRifle
+        whitelistFailPopup: gun-magazine-whitelist-fail
       gun_chamber:
         name: Chamber
         startingItem: CartridgeLightRifle
@@ -104,7 +106,7 @@
 
 - type: entity
   name: M-90gl
-  parent: BaseWeaponRifle
+  parent: [BaseWeaponRifle, BaseSyndicateContraband]
   id: WeaponRifleM90GrenadeLauncher
   description: An older bullpup carbine model, with an attached underbarrel grenade launcher. Uses .20 rifle ammo.
   components:
@@ -128,6 +130,7 @@
         whitelist:
           tags:
             - MagazineRifle
+        whitelistFailPopup: gun-magazine-whitelist-fail
       gun_chamber:
         name: Chamber
         startingItem: CartridgeRifle
@@ -147,7 +150,7 @@
 
 - type: entity
   name: Lecter
-  parent: BaseWeaponRifle
+  parent: [BaseWeaponRifle, BaseRestrictedContraband]
   id: WeaponRifleLecter
   description: A high end military grade assault rifle. Uses .20 rifle ammo.
   components:
@@ -178,6 +181,7 @@
         whitelist:
           tags:
             - MagazineRifle
+        whitelistFailPopup: gun-magazine-whitelist-fail
       gun_chamber:
         name: Chamber
         startingItem: CartridgeRifle

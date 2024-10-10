@@ -12,19 +12,23 @@
       "directions": 4
     },
     {
-      "name": "brown",
-      "directions": 4
-    },
-    {
-      "name": "bushy",
-      "directions": 4
-    },
-    {
       "name": "charred",
       "directions": 4
     },
     {
-      "name": "deathhead",
+      "name": "dbushy",
+      "directions": 4
+    },
+    {
+      "name": "dcurvy",
+      "directions": 4
+    },
+    {
+      "name": "dfan",
+      "directions": 4
+    },
+    {
+      "name": "dpointy",
       "directions": 4
     },
     {
@@ -36,15 +40,11 @@
       "directions": 4
     },
     {
-      "name": "gothic",
+      "name": "gray",
       "directions": 4
     },
     {
       "name": "jungle",
-      "directions": 4
-    },
-    {
-      "name": "lovers",
       "directions": 4
     },
     {
@@ -56,10 +56,6 @@
       "directions": 4
     },
     {
-      "name": "moonfly",
-      "directions": 4
-    },
-    {
       "name": "oakworm",
       "directions": 4
     },
@@ -68,23 +64,11 @@
       "directions": 4
     },
     {
-      "name": "poison",
-      "directions": 4
-    },
-    {
-      "name": "reddish",
-      "directions": 4
-    },
-    {
-      "name": "regal",
-      "directions": 4
-    },
-    {
       "name": "royal",
       "directions": 4
     },
     {
-      "name": "white",
+      "name": "striped",
       "directions": 4
     },
     {

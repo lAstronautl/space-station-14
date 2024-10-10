@@ -1,0 +1,71 @@
+- type: entity
+  id: BulletMic
+  name: MIC bolt
+  parent: BaseBullet
+  noSpawn: true
+  description: Not too bad, but you still don't want to get hit by it.
+  components:
+  - type: Sprite
+    noRot: false
+    sprite: Objects/Weapons/Guns/Projectiles/projectiles_tg.rsi
+    layers:
+    - state: cbbolt
+  - type: GatheringProjectile
+  - type: Projectile
+    damage:
+      types:
+        Poison: 10
+  - type: TimedDespawn
+    lifetime: 0.4
+  - type: StaminaDamageOnCollide
+    damage: 65
+
+- type: entity
+  name: emitter bolt
+  id: EmitterCannonBolt
+  parent: EmitterBolt
+  noSpawn: true
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Heat: 25
+
+- type: entity
+  name: emitter bolt
+  id: X01Attack
+  parent: EmitterBolt
+  noSpawn: true
+  components:
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Projectiles/projectiles_tg.rsi
+    layers:
+    - state: redtrac
+      shader: unshaded
+  - type: Projectile
+    damage:
+      types:
+        Heat: 22
+
+- type: entity
+  id: BFGBullet
+  name: bzzt bullet
+  noSpawn: true
+  parent: BaseBullet
+  components:
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Projectiles/magic.rsi
+    layers:
+    - state: bluespace
+  - type: Projectile
+    ignoreResistances: true
+    damage:
+      types:
+        Brute: 20
+        Burn: 20
+        Structural: 100
+  - type: PointLight
+    enabled: true
+    color: "#0000FF"
+    radius: 5.0
+    energy: 4.0

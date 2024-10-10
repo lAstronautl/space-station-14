@@ -1,0 +1,8 @@
+- type: entity
+  parent: Paper
+  id: StationGoalPaper
+  name: centcom station goal message
+  description: 'It looks like you have a lot of work to do.'
+  components:
+  - type: PaperVisuals
+    maxWritableArea: 600.0, 0.0

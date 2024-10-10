@@ -1,0 +1,78 @@
+- type: entity
+  parent: IDCardStandard
+  id: BlueShieldIDCard
+  name: blueshield ID card
+  components:
+  - type: Sprite
+    layers:
+    - state: blue
+    - state: idblueshield
+  - type: Item
+    heldPrefix: blue
+  - type: PresetIdCard
+    job: BlueShield
+
+- type: entity
+  parent: IDCardStandard
+  id: MinerIDCard
+  name: salvage ID card
+  components:
+  - type: Sprite
+    layers:
+    - state: default
+    - state: idshaftminer
+  - type: PresetIdCard
+    job: Miner
+
+- type: entity
+  parent: IDCardStandard
+  id: CentcomConsultantIDCard
+  name: CentCom consultant ID card
+  components:
+  - type: Sprite
+    layers:
+    - state: centcom
+    - state: idcentcom
+  - type: PresetIdCard
+    job: CentComConsultant
+
+- type: entity
+  parent: IDCardStandard
+  id: ShuttlePilotIDCard
+  name: shuttle pilot ID card
+  components:
+  - type: Sprite
+    layers:
+    - state: default
+    - state: idpilot
+  - type: PresetIdCard
+    job: ShuttlePilot
+  - type: IdCard
+
+- type: entity
+  parent: IDCardStandard
+  id: CentcomInternIDCard
+  name: centcomm intern ID card
+  components:
+  - type: Sprite
+    layers:
+    - state: centcom
+    - state: idpassenger
+  - type: Item
+    heldPrefix: blue
+  - type: PresetIdCard
+    job: CentralCommandIntern
+
+- type: entity
+  parent: IDCardStandard
+  id: CentcomInternLeaderIDCard
+  name: centcom intern leader ID card
+  components:
+  - type: Sprite
+    layers:
+    - state: centcom
+    - state: idpassenger
+  - type: Item
+    heldPrefix: blue
+  - type: PresetIdCard
+    job: CentralCommandInternLeader

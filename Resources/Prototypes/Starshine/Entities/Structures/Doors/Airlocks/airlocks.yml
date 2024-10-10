@@ -1,0 +1,43 @@
+- type: entity
+  parent: Airlock
+  id: AirlockCentralCommandV2
+  suffix: CentralCommand
+  components:
+  - type: Sprite
+    sprite: Structures/Doors/Airlocks/Standard/centcom.rsi
+  - type: WiresPanelSecurity
+    securityLevel: maxSecurity
+  - type: Wires
+    boardName: wires-board-name-highsec
+    layoutId: HighSec
+
+- type: entity
+  parent: Airlock
+  id: AirlockHatchCentralCommand
+  suffix: CentralCommand, Hatch
+  components:
+  - type: Sprite
+    sprite: Structures/Doors/Airlocks/Standard/hatch.rsi
+  - type: WiresPanelSecurity
+    securityLevel: maxSecurity
+  - type: Wires
+    boardName: wires-board-name-highsec
+    layoutId: HighSec
+
+- type: entity
+  parent: Airlock
+  id: AirlockMiner
+  suffix: Miner
+  components:
+  - type: Sprite
+    sprite: Structures/Doors/Airlocks/Standard/miner.rsi
+
+- type: entity
+  parent: AirlockGlass
+  id: AirlockMinerGlass
+  suffix: Miner
+  components:
+  - type: Sprite
+    sprite: Structures/Doors/Airlocks/Glass/miner.rsi
+  - type: PaintableAirlock
+    department: Cargo

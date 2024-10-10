@@ -1,8 +1,4 @@
 - type: loadout
   id: CaptainCrown
-  equipment: CaptainCrown
-
-- type: startingGear
-  id: CaptainCrown
   equipment:
     head: ClothingHeadHatCapCrown

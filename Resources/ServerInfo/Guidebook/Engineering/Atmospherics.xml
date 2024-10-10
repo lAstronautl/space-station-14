@@ -1,39 +1,39 @@
 <Document>
-  # Атмосфера
+  # Atmospherics
 
-  Настройки атмосферы необходимы для вашего долгосрочного комфорта, но, как правило, не имеют документации, в результате чего их немного сложно настроить. Ниже предпринята попытка охватить основы.
+  Atmospherics setups are a necessity for your long-term comfort, but are generally underdocumented, resulting in them being a bit tricky to set up. The following attempts to cover the basics.
 
-  ## Стандартная смесь
-  Дыхание чистым О2 или N2 вредно для здоровья экипажа, поэтому рекомендуем сразу использовать смесь [color=#a4885c]78% N2 и 22% O2 под 101.24кПа.[/color] Рекомендуется, чтобы Ваш газовый смеситель был настроен на выход не менее 1000 кПа для более быстрого восстановления давления в помещениях, не создавая слишком большого риска разгерметизации, если предатели саботируют дистрибутив.
+  ## Standard Mix
+  Breathing pure O2 or pure N2 is generally bad for the health of your crew, and it is recommended to instead aim for a mix of [color=#a4885c]78% N2 and 22% O2 at 101.24kPa.[/color] It's recommended that your gas mixer setup be set to output at least 300kPA for faster re-pressurization of rooms, without posing too much of an overpressurization risk, should traitors sabotage the distro.
   <Box>
     <GuideEntityEmbed Entity="OxygenCanister"/>
     <GuideEntityEmbed Entity="NitrogenCanister"/>
     <GuideEntityEmbed Entity="AirCanister"/>
   </Box>
-  Вариации этой смеси могут потребоваться для долгосрочного комфорта нетипичного экипажа (например, Воксов, которые отравлены кислородом и дышат азотом). Для нетипичных членов экипажа (которые будут реализованы) рекомендуется попытаться обеспечить их личным пространством, изолированным либо шлюзом, либо отсеком для утилизации. Помните, что оба способа негерметичны, и вам понадобятся скрубберы с обеих сторон шлюза, чтобы очистить его от просочившихся газов.
+  Variations on this mix may be necessary for the long-term comfort of atypical crew, (for example, Voxes, who are poisoned by Oxygen and breathe Nitrogen). For atypical crew (to be implemented), it is recommended to try and give them their own personal space, isolated by either an airlock or disposals section. Keep in mind that both methods are leaky and you will need scrubbers on both sides of the lock to clean up any leaked gasses.
   <Box>
-    <GuideEntityEmbed Entity="PlasmaCanister"/>
+    <GuideEntityEmbed Entity="NitrogenCanister"/>
     <GuideEntityEmbed Entity="StorageCanister"/>
   </Box>
-  ## Вентиляции и скрубберы
-  Вентиляции и скрубберы - это основные атмосферные устройства, которые заполняют и очищают помещения соответственно. По умолчанию они настроены на заполнение помещений до стандартного давления (101,24 кПа) и на удаление из помещения всех газов, не относящихся к O2/N2. Их можно переконфигурировать в соответствии с настройками по умолчанию, связав их с воздушной сигнализацией, что позволит вам настроить их реакцию на различные типы газов или уровни давления.
+  ## Vents and Scrubbers
+  Vents and scrubbers are core atmospherics devices that fill and cleanse rooms, respectively. By default, they are configured for filling rooms to standard pressure (101.24kPa) and to remove all non-O2/N2 gasses from a room. They can be reconfigured from their default settings by linking them to an Air Alarm, allowing you to configure how they respond to various types of gasses or pressure levels.
 
   <Box>
     <GuideEntityEmbed Entity="GasVentPump"/>
     <GuideEntityEmbed Entity="GasVentScrubber"/>
   </Box>
-  При стандартном режиме работы, если обычная вентиляция обнаруживает, что снаружи находится вакуум, он автоматически прекращает работу до достижения минимального давления, чтобы избежать разрушения полезных газов. Это можно исправить, разгерметизировав помещение до этого минимального давления путем дозаправки газового баллона (потенциально нескольких, если помещение имеет значительные размеры).
+  During standard operation, if a normal vent detects that the outside environment is space, it will automatically cease operation until a minimum pressure is reached to avoid destruction of useful gasses. This can be fixed by pressurizing the room up to that minimum pressure by refilling it with a gas canister (potentially multiple, if the room is of significant size).
 
-  Если вы столкнулись с ситуацией, когда скрубберы не могут очистить помещение достаточно быстро (а функция "Сифон" не справляется), используйте портативные скрубберы, перетащив их в нужное место и закрепив. Они работают гораздо быстрее, чем стандартные скрубберы, и могут довольно быстро очистить помещение. При больших утечках может потребоваться использование нескольких.
+  Should you encounter a situation where scrubbers aren't cleaning a room fast enough (and the "Siphon" functionality still cannot keep up), employ portable scrubbers by dragging them to the affected location and wrenching them down. They work much faster than typical scrubbers and can clean up a room quite quickly. Large spills may require you to employ multiple.
   <Box>
     <GuideEntityEmbed Entity="PortableScrubber"/>
   </Box>
-  # Камеры смешивания и сжигания
-  Если вы выполните все поставленные задачи, то сможете получить дополнительную электроэнергию или деньги, создавая новые химические газы.
+  # Gas mixes and Burn chambers
+  In the event you finish all the tasks at hand, you can make some extra money by creating new chemical gasses.
 
-  ## Тритий
-  Тритий - это прозрачный зелёный газ, который легко воспламеняется, радиоактивен и сгорает при контакте с кислородом, что делает его очень полезным при работе [color=#a4885c]ТЭГ'а[/color].
-  Его можно получить, сжигая 1% плазмы и 96% или более кислорода в камере сгорания (идеальное соотношение - 3% плазмы и 97% кислорода). Вы можете извлечь этот газ с помощью скрубберов.
+  ##Tritium
+  Tritium is a clear, green gas that is highly flammable, radioactive, and combusts when in contact with oxygen, making it very helpful when running the [color=#a4885c]TEG[/color].
+  It can be made by burning 1% Plasma and 96% or more Oxygen in the Burn Chamber (Ideal ratio is 3% Plasma to 97% Oxygen). You can extract this gas through scrubbers.
 
   <Box>
     <GuideEntityEmbed Entity="PlasmaCanister"/>
@@ -42,26 +42,26 @@
     <GuideEntityEmbed Entity="TritiumCanister"/>
   </Box>
 
-  ## Фрезон
-    Фрезон - это голубовато-зеленый газ, очень сложный и очень опасный. Чтобы получить фрезон, необходимо смешать тритий, кислород и азот в помещении с температурой 70 К, чтобы запустить реакцию и предотвратить сгорание трития с кислородом.
+  ##Frezon
+  Frezon is a bluish-green gas that is very complex and very dangerous. To obtain frezon, you must mix Tritium, Oxygen, and Nitrogen in a 70K room to start the reaction, and prevent the Tritium from combusting with the oxygen.
 
   <Box>
     <GuideEntityEmbed Entity="TritiumCanister"/>
     <GuideEntityEmbed Entity="AirCanister"/>
     <GuideEntityEmbed Entity="GasVentScrubber"/>
-    <GuideEntityEmbed Entity="StorageCanister" Caption="Канистра Фрезона"/>
+    <GuideEntityEmbed Entity="StorageCanister" Caption="Frezon Canister"/>
   </Box>
 
-  Очень важно понимать, что утечка фрезона может серьёзно навредить станции, превратив её в зимний ад, наполненный зудящими свитерами и обморожениями. Фрезон очень холодный и может заморозить станцию до смерти, если хотя бы несколько молей выберутся наружу, поэтому убедитесь, что вы заперли свои канистры или просто переместили фрезон непосредственно в хранилище.
+  It is critical to understand that a frezon leak can devastate the station, causing a wintery hell filled with itchy sweaters and cold burns. Frezon is very cold, and can freeze the station to death if even a few moles get out, so make sure that you lock your canisters or just move your Frezon straight into a storage room.
 
-  ## Справочный лист
-  - Стандартная смесь это [color=#a4885c]78% N2 и 22% O2 под 101.24kPa.[/color]
-  - Газ подчиняется реальной математике. Вы можете использовать уравнение:
+  ## Reference Sheet
+  - Standard atmospheric mix is [color=#a4885c]78% N2 and 22% O2 at 101.24kPa.[/color]
+  - Gas obeys real math. You can use the equation:
   <Box>
     [color=cyan]PV = nRT[/color]
   </Box>
   <Box>
-    ([color=#a4885c]Давление кПа * объём L = моли * R * Температура K[/color])
-  </Box> чтобы получить информацию, которая может вам понадобиться о газе. R приблизительно равен 8.31446.
+    ([color=#a4885c]Pressure kPa * Volume L = Moles * R * Temperature K[/color])
+  </Box> to derive information you might need to know about a gas. R is approximately 8.31446.
 
 </Document>

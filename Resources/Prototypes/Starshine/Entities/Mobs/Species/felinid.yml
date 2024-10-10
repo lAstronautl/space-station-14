@@ -1,0 +1,39 @@
+- type: entity
+  save: false
+  name: Urist McCat
+  parent: BaseMobSpeciesOrganic
+  id: BaseMobFelinid
+  abstract: true
+  components:
+  - type: HumanoidAppearance
+    species: Felinid
+  - type: WoundLicking
+  - type: Hunger
+  - type: Thirst
+  - type: Perishable
+  - type: Climbing
+    tableClimbMultiplier: 0.5
+  - type: Speech
+    speechVerb: Felinid
+  - type: MeleeWeapon
+    soundHit:
+      collection: AlienClaw
+    angle: 30
+    animation: WeaponArcClaw
+    damage:
+      types:
+        Slash: 5
+  - type: Wagging
+  - type: FlashableModifier
+    durationMultiplier: 1.5
+    slowdownMultiplier: 0.75
+    stunDurationMultiplier: 1.5
+
+- type: entity
+  name: Urist McHands
+  id: MobFelinidDummy
+  parent: BaseSpeciesDummy
+  noSpawn: true
+  components:
+  - type: HumanoidAppearance
+    species: Felinid

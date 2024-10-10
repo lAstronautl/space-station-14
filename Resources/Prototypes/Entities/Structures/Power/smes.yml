@@ -79,8 +79,8 @@
       mediumVoltageNode: output
       chanceOfShock: 0.33
     - type: Damageable
-      damageContainer: Inorganic
-      damageModifierSet: StrongMetallic
+      damageContainer: StructuralInorganic
+      damageModifierSet: StructuralMetallicStrong
     - type: BatterySensor
     - type: DeviceNetwork
       deviceNetId: AtmosDevices

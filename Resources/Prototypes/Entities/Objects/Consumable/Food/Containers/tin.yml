@@ -95,7 +95,8 @@
     - sweet
     - funny
   - type: Food
-    trash: FoodTinPeachesTrash
+    trash: 
+    - FoodTinPeachesTrash
   - type: Tag
     tags:
     - Fruit
@@ -123,7 +124,8 @@
         - ReagentId: Nutriment
           Quantity: 15
   - type: Food
-    trash: FoodTinPeachesMaintTrash
+    trash: 
+    - FoodTinPeachesMaintTrash
 
 # only exists for backwards compatibility with a few maps, nothing else uses it
 - type: entity
@@ -166,7 +168,8 @@
     - salty
     - cheap
   - type: Food
-    trash: FoodTinBeansTrash
+    trash: 
+    - FoodTinBeansTrash
 
 - type: entity
   parent: FoodTinBaseTrash
@@ -195,7 +198,8 @@
     - salty
     - cheap
   - type: Food
-    trash: FoodTinMRETrash
+    trash: 
+    - FoodTinMRETrash
   - type: Tag
     tags:
     - Meat

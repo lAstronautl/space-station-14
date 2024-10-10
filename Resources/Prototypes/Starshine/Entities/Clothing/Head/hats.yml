@@ -12,3 +12,14 @@
     tags:
     - Clothing
     - WhitelistChameleon
+
+- type: entity
+  parent: [ ClothingHeadBase, BaseCentcommContraband ]
+  id: ClothingHeadHatCentcomConsultantCap
+  name: Centcom сonsultant сap
+  description: "An expensive cap, with a bright gold emblem on your forehead, saying that you are the inspector of order at this station."
+  components:
+  - type: Sprite
+    sprite: Clothing/Head/Hats/centcom_consultant.rsi
+  - type: Clothing
+    sprite: Clothing/Head/Hats/centcom_consultant.rsi

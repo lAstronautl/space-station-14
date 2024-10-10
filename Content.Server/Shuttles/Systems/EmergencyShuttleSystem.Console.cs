@@ -225,7 +225,7 @@ public sealed partial class EmergencyShuttleSystem
                 Loc.GetString("emergency-shuttle-left", ("transitTime", $"{TransitTime:0}")),
                 announcementSound: shuttleLeftAnnouncement);
 
-            Timer.Spawn((int) (TransitTime * 1000) + _bufferTime.Milliseconds, () => _roundEnd.EndRound(), _roundEndCancelToken?.Token ?? default);
+            Timer.Spawn((int)(TransitTime * 1000) + _bufferTime.Milliseconds, () => _roundEnd.EndRound(), _roundEndCancelToken?.Token ?? default);
         }
 
         // All the others.

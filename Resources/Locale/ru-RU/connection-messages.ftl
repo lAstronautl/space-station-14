@@ -1,16 +1,4 @@
-whitelist-not-whitelisted = Вас нет в белом списке.
 # proper handling for having a min/max or not
-whitelist-playercount-invalid =
-    { $min ->
-        [0] Белый список для этого сервера применяется только при количестве игроков меньше { $max }.
-       *[other]
-            Белый список для этого сервера применяется только при количестве игроков больше { $min } { $max ->
-                [2147483647] -> так что, возможно, Вы сможете присоединиться позже.
-               *[other] -> и меньше { $max }, так что ,возможно, Вы сможете присоединиться позже.
-            }
-    }
-whitelist-not-whitelisted-rp = Вас нет в белом списке. Чтобы попасть в белый список, посетите наш Discord.
-whitelist-no-reserve-slot = У вас отсутствует резервный слот. Вы можете его приобрести через донат-магазин перейдя в Discord.
 cmd-whitelistadd-desc = Добавляет игрока с указанным именем в белый список.
 cmd-whitelistadd-help = Использование: whitelistadd <username>
 cmd-whitelistadd-existing = { $username } уже в белом списке!
@@ -38,6 +26,26 @@ discord-jobban-msg = Игроку { $username } заблокирована ро�
 discord-departmentban-msg = Игроку { $username } заблокирован департамент { $department } { $expires } по причине: { $reason }
 soft-player-cap-full = Сервер заполнен!
 panic-bunker-account-denied = Этот сервер находится в режиме бункера паники, который часто включается в качестве меры предосторожности против набегаторов. Новые подключения от учётных записей, не соответствующих определённым требованиям, временно не принимаются. Повторите попытку позже
+whitelist-playtime = You do not have enough playtime to join this server. You need at least { $minutes } minutes of playtime to join this server.
+whitelist-player-count = This server is currently not accepting players. Please try again later.
+whitelist-notes = You currently have too many admin notes to join this server. You can check your notes by typing /adminremarks in chat.
+whitelist-manual = You are not whitelisted on this server.
+whitelist-blacklisted = You are blacklisted from this server.
+whitelist-always-deny = You are not allowed to join this server.
+whitelist-fail-prefix = Not whitelisted: { $msg }
+whitelist-misconfigured = The server is misconfigured and is not accepting players. Please contact the server owner and try again later.
+cmd-blacklistadd-desc = Adds the player with the given username to the server blacklist.
+cmd-blacklistadd-help = Usage: blacklistadd <username>
+cmd-blacklistadd-existing = { $username } is already on the blacklist!
+cmd-blacklistadd-added = { $username } added to the blacklist
+cmd-blacklistadd-not-found = Unable to find '{ $username }'
+cmd-blacklistadd-arg-player = [player]
+cmd-blacklistremove-desc = Removes the player with the given username from the server blacklist.
+cmd-blacklistremove-help = Usage: blacklistremove <username>
+cmd-blacklistremove-existing = { $username } is not on the blacklist!
+cmd-blacklistremove-removed = { $username } removed from the blacklist
+cmd-blacklistremove-not-found = Unable to find '{ $username }'
+cmd-blacklistremove-arg-player = [player]
 panic-bunker-account-denied-reason = Этот сервер находится в режиме бункера паники, который часто включается в качестве меры предосторожности против набегаторов. Новые подключения учётных записей, не соответствующих определённым требованиям, временно не принимаются. Повторите попытку позже. Причина: "{ $reason }"
 panic-bunker-account-reason-account = Ваша учётная запись Space Station 14 слишком новая. Она должна быть старше { $minutes } минут
 panic-bunker-account-reason-overall =

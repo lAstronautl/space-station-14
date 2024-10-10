@@ -277,10 +277,10 @@
         spawn:
           SheetPlasteel1:
             min: 5
-            max: 20
+            max: 5
           SheetSteel1:
             min: 10
-            max: 60
+            max: 20
   - type: StaticPrice
     price: 1000
 #----------------------------------------------------------------------------

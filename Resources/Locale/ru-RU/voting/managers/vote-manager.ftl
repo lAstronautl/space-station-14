@@ -17,3 +17,14 @@ ui-vote-map-tie = Ничья при голосовании за карту! Вы
 ui-vote-map-win = { $winner } выиграла голосование о выборе карты!
 ui-vote-map-notlobby = Голосование о выборе карты действует только в предраундовом лобби!
 ui-vote-map-notlobby-time = Голосование о выборе карты действует только в предраундовом лобби, когда остаётся { $time } времени!
+# Votekick votes
+ui-vote-votekick-unknown-initiator = Игрок
+ui-vote-votekick-unknown-target = Неизвестный игрок
+ui-vote-votekick-title = { $initiator } вызвал голосование на исключение пользователя: { $targetEntity }. Причина: { $reason }
+ui-vote-votekick-yes = Да
+ui-vote-votekick-no = Нет
+ui-vote-votekick-abstain = Воздержусь
+ui-vote-votekick-success = Голосование на исключение { $target } прошло успешно. Причина исключения: { $reason }
+ui-vote-votekick-failure = Голосование на исключение { $target } провалилось. Причина исключения: { $reason }
+ui-vote-votekick-not-enough-eligible = Недостаточно подходящих избирателей, чтобы начать голосование на исключение: { $voters }/{ $requirement }
+ui-vote-votekick-server-cancelled = Голосование на исключение { $target } было отменено сервером.

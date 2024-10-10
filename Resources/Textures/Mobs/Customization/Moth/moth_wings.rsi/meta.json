@@ -12,15 +12,23 @@
       "directions": 4
     },
     {
-      "name": "brown",
-      "directions": 4
-    },
-    {
       "name": "charred",
       "directions": 4
     },
     {
-      "name": "deathhead",
+      "name": "dbushy_primary",
+      "directions": 4
+    },
+    {
+      "name": "dbushy_secondary",
+      "directions": 4
+    },
+    {
+      "name": "deathhead_primary",
+      "directions": 4
+    },
+    {
+      "name": "deathhead_secondary",
       "directions": 4
     },
     {
@@ -28,11 +36,19 @@
       "directions": 4
     },
     {
+      "name": "dfan",
+      "directions": 4
+    },
+    {
       "name": "feathery",
       "directions": 4
     },
     {
-      "name": "firewatch",
+      "name": "firewatch_primary",
+      "directions": 4
+    },
+    {
+      "name": "firewatch_secondary",
       "directions": 4
     },
     {
@@ -48,19 +64,19 @@
       "directions": 4
     },
     {
-      "name": "lovers",
+      "name": "maple_primary",
       "directions": 4
     },
     {
-      "name": "maple",
+      "name": "maple_secondary",
       "directions": 4
     },
     {
-      "name": "moffra",
+      "name": "moffra_primary",
       "directions": 4
     },
     {
-      "name": "moonfly",
+      "name": "moffra_secondary",
       "directions": 4
     },
     {
@@ -68,7 +84,11 @@
       "directions": 4
     },
     {
-      "name": "plasmafire",
+      "name": "plasmafire_primary",
+      "directions": 4
+    },
+    {
+      "name": "plasmafire_secondary",
       "directions": 4
     },
     {
@@ -76,19 +96,19 @@
       "directions": 4
     },
     {
-      "name": "poison",
+      "name": "royal_primary",
       "directions": 4
     },
     {
-      "name": "reddish",
-      "directions": 4
-    },
-    {
-      "name": "royal",
+      "name": "royal_secondary",
       "directions": 4
     },
     {
       "name": "stellar",
+      "directions": 4
+    },
+    {
+      "name": "striped",
       "directions": 4
     },
     {

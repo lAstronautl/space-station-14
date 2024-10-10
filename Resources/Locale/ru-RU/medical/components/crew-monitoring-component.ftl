@@ -1,6 +1,7 @@
 ## UI
 
 crew-monitoring-user-interface-title = Мониторинг экипажа
+crew-monitor-filter-line-placeholder = Поиск по имени/работе
 crew-monitoring-user-interface-name = Имя
 crew-monitoring-user-interface-job = Работа
 crew-monitoring-user-interface-status = Статус
