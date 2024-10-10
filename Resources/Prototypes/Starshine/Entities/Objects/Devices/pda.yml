@@ -1,0 +1,112 @@
+- type: entity
+  parent: BasePDA
+  id: MinerPDA
+  name: salvage PDA
+  description: Smells like ash.
+  components:
+  - type: Pda
+    id: MinerIDCard
+    state: pda-mining
+  - type: PdaBorderColor
+    borderColor: "#af9366"
+    accentVColor: "#8900c9"
+  - type: Icon
+    state: pda-mining
+
+- type: entity
+  parent: BasePDA
+  id: BlueShieldPDA
+  name: captain PDA
+  description: Surprisingly no different from your PDA.
+  components:
+  - type: Pda
+    id: BlueShieldIDCard
+    state: pda-blueshield
+    penSlot:
+      startingItem: PenCentcom
+      priority: -1
+      whitelist:
+        tags:
+        - Write
+  - type: PdaBorderColor
+    borderColor: "#323248"
+    accentHColor: "#2851a4"
+    accentVColor: "#eeeeee"
+  - type: Icon
+    state: pda-blueshield
+
+- type: entity
+  parent: BasePDA
+  id: CentcomConsultantPDA
+  name: CentCom consultant PDA
+  description: Light green sign of walking bureaucracy.
+  components:
+  - type: Pda
+    id: CentcomConsultantIDCard
+    state: pda-centcom
+    penSlot:
+      startingItem: PenCentcom
+      priority: -1
+      whitelist:
+        tags:
+        - Write
+  - type: PdaBorderColor
+    borderColor: "#15b115"
+    accentHColor: "#dfc910"
+    accentVColor: "#dfc910"
+  - type: Icon
+    state: pda-centcom
+
+- type: entity
+  parent: BaseSecurityPDA
+  id: CentcomInternPDA
+  name: CentCom Intern PDA
+  description: Light green sign of walking bureaucracy.
+  components:
+  - type: Pda
+    id: CentcomInternIDCard
+    state: pda-centcom
+    penSlot:
+      startingItem: PenCentcom
+      priority: -1
+      whitelist:
+        tags:
+        - Write
+  - type: PdaBorderColor
+    borderColor: "#00b62e"
+  - type: Icon
+    state: pda-centcom
+
+- type: entity
+  parent: BaseSecurityPDA
+  id: CentcomInternLeaderPDA
+  name: CentCom Intern Leader PDA
+  description: Light green sign of walking bureaucracy.
+  components:
+  - type: Pda
+    id: CentcomInternIDCard
+    state: pda-centcom
+    penSlot:
+      startingItem: PenCentcom
+      priority: -1
+      whitelist:
+        tags:
+        - Write
+  - type: PdaBorderColor
+    borderColor: "#00b62e"
+  - type: Icon
+    state: pda-centcom
+
+- type: entity
+  parent: BaseSecurityPDA
+  id: ShuttlePilotPDA
+  name: Pilot PDA
+  description: Red to hide the stains of assistant blood.
+  components:
+  - type: Pda
+    id: ShuttlePilotIDCard
+    state: pda-security
+  - type: PdaBorderColor
+    borderColor: "#A32D26"
+  - type: Icon
+    state: pda-security

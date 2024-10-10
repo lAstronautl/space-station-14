@@ -1,8 +1,4 @@
 - type: loadout
   id: CitizenJumpsuit
-  equipment: CitizenJumpsuit
-
-- type: startingGear
-  id: CitizenJumpsuit
   equipment:
     jumpsuit: ClothingUniformJumpsuitCitizen

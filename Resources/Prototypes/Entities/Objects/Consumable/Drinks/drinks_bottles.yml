@@ -39,6 +39,7 @@
   - type: PhysicalComposition
     materialComposition:
       Plastic: 100
+  - type: DnaSubstanceTrace
   - type: PressurizedSolution
     solution: drink
   - type: Shakeable
@@ -731,7 +732,7 @@
 - type: entity
   parent: [DrinkBottleVisualsOpenable, DrinkBottlePlasticBaseFull]
   id: DrinkCreamCartonXL
-  name: Milk Cream XL
+  name: milk cream XL
   description: It's cream. Made from milk. What else did you think you'd find in there?
   components:
   - type: SolutionContainerManager
@@ -754,7 +755,7 @@
   id: DrinkSugarJug
   name: sugar jug
   suffix: For Drinks, Full
-  description: some people put this in their coffee...
+  description: Some people put this in their coffee...
   components:
   - type: SolutionContainerManager
     solutions:
@@ -769,7 +770,7 @@
   parent: DrinkBottlePlasticBaseFull
   id: DrinkLemonLimeJug
   name: lemon lime jug
-  description: a dual citrus sensation.
+  description: A dual citrus sensation.
   components:
   - type: SolutionContainerManager
     solutions:
@@ -786,7 +787,7 @@
   parent: DrinkBottlePlasticBaseFull
   id: DrinkMeadJug
   name: mead jug
-  description: storing mead in a plastic jug should be a crime.
+  description: Storing mead in a plastic jug should be a crime.
   components:
   - type: SolutionContainerManager
     solutions:
@@ -803,7 +804,7 @@
   parent: DrinkBottlePlasticBaseFull
   id: DrinkIceJug
   name: ice jug
-  description: stubborn water. pretty cool.
+  description: Stubborn water. Pretty cool.
   components:
   - type: SolutionContainerManager
     solutions:
@@ -837,7 +838,7 @@
   parent: DrinkBottlePlasticBaseFull
   id: DrinkCoffeeJug
   name: coffee jug
-  description: wake up juice, of the heated kind.
+  description: Wake up juice, of the heated kind.
   components:
   - type: SolutionContainerManager
     solutions:
@@ -854,7 +855,7 @@
   parent: DrinkBottlePlasticBaseFull
   id: DrinkTeaJug
   name: tea jug
-  description: the drink of choice for the Bri'ish and hipsters.
+  description: The drink of choice for the Bri'ish and hipsters.
   components:
   - type: SolutionContainerManager
     solutions:
@@ -871,7 +872,7 @@
   parent: DrinkBottlePlasticBaseFull
   id: DrinkGreenTeaJug
   name: green tea jug
-  description: its like tea... but green! great for settling the stomach.
+  description: It's like tea... but green! great for settling the stomach.
   components:
   - type: SolutionContainerManager
     solutions:
@@ -888,7 +889,7 @@
   parent: DrinkBottlePlasticBaseFull
   id: DrinkIcedTeaJug
   name: iced tea jug
-  description: for when the regular tea is too hot for you boohoo
+  description: For when the regular tea is too hot for you boohoo.
   components:
   - type: SolutionContainerManager
     solutions:
@@ -905,7 +906,7 @@
   parent: DrinkBottlePlasticBaseFull
   id: DrinkDrGibbJug
   name: dr gibb. jug
-  description: yeah I don't know either...
+  description: Yeah I don't know either...
   components:
   - type: SolutionContainerManager
     solutions:
@@ -922,7 +923,7 @@
   parent: DrinkBottlePlasticBaseFull
   id: DrinkRootBeerJug
   name: root beer jug
-  description: this drink makes Australians giggle
+  description: This drink makes Australians giggle.
   components:
   - type: SolutionContainerManager
     solutions:
@@ -939,7 +940,7 @@
   parent: DrinkBottlePlasticBaseFull
   id: DrinkWaterMelonJuiceJug
   name: watermelon juice jug
-  description: May include leftover seeds
+  description: May include leftover seeds.
   components:
   - type: SolutionContainerManager
     solutions:

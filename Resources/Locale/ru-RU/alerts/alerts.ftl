@@ -64,6 +64,8 @@ alerts-suit-power-name = Энергия костюма
 alerts-suit-power-desc = Сколько энергии у Вашего костюма космического ниндзя.
 alerts-bleed-name = [color=red]Кровотечение[/color]
 alerts-bleed-desc = Вы [color=red]истекаете кровью[/color].
+alerts-adrenaline-name = [color=red]Адреналин[/color]
+alerts-adrenaline-desc = Вас переполняет адреналин: боль не будет замедлять вас.
 alerts-pacified-name = [color=green]Пацифизм[/color]
 alerts-pacified-desc = Вы чувствуете себя умиротворенно и не можете вредить живым существам.
 alerts-magboots-name = Магнитные ботинки

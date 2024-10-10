@@ -1,0 +1,46 @@
+## Central Command Interns
+
+- type: entity
+  name: Centcom Intert
+  id: RandomHumanoidSpawnerCentcomIntern
+  components:
+    - type: Sprite
+      sprite: Markers/jobs.rsi
+      state: centcom
+    - type: RandomHumanoidSpawner
+      settings: CentcomIntern
+
+- type: randomHumanoidSettings
+  id: CentcomIntern
+  parent: EventHumanoidMindShielded
+  components:
+    - type: GhostRole
+      name: ghost-role-information-centcom-intern-name
+      description: ghost-role-information-centcom-intern-description
+      rules: ghost-role-information-nonantagonist-rules
+      raffle:
+        settings: default
+    - type: Loadout
+      prototypes: [ CentcomInternGear ]
+      roleLoadout: [ RoleSurvivalStandard ]
+
+- type: entity
+  id: RandomHumanoidSpawnerCentcomInternLeader
+  name: Centcom Intert Leader
+  components:
+    - type: Sprite
+      netsync: false
+      sprite: Markers/jobs.rsi
+      state: centcom
+    - type: RandomHumanoidSpawner
+      settings: CentcomInternLeader
+
+- type: randomHumanoidSettings
+  id: CentcomInternLeader
+  components:
+    - type: Loadout
+      prototypes: [ CentcomInternLeaderGear ]
+    - type: GhostRole
+      name: ghost-role-information-centcom-intern-leader-name
+      description: ghost-role-information-centcom-intern-leader-description
+    - type: GhostTakeoverAvailable

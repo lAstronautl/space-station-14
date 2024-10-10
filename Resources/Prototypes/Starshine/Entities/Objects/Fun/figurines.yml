@@ -1,0 +1,26 @@
+- type: entity
+  parent: BaseFigurine
+  id: ToyFigurineBrigmedic
+  name: brigmedic figure
+  description: MEDIC!
+  components:
+  - type: Sprite
+    state: brigmedic
+
+- type: entity
+  parent: BaseFigurine
+  id: ToyFigurineBlueShieldOfficer
+  name: blueshield officer figure
+  description: A figurine depicting the blueshield officer, austere and blue, stands guard over the station government. I guess.
+  components:
+  - type: Sprite
+    state: blueshield
+
+- type: entity
+  parent: BaseFigurine
+  id: ToyFigurineCentcomConsultant
+  name: CentCom consultant figure
+  description: A figurine depicting a Central Command Consultant is expensively dressed and content with his status, perhaps trying to keep order.
+  components:
+  - type: Sprite
+    state: consultant

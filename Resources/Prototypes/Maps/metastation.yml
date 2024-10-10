@@ -32,7 +32,7 @@
            SecurityOfficer: [ 6, 6 ]
            SecurityCadet: [ 4, 4 ]
            Lawyer: [ 2, 2 ]
-           Brigmedic: [ 1, 1 ]
+           Brigmedic: [ 1, 1 ] #Starshine
            ShuttlePilot: [1, 1]
         #Engineering
            AtmosphericTechnician: [ 3, 3 ]
@@ -63,6 +63,7 @@
            Librarian: [ 2, 2 ]
            Janitor: [ 3, 3 ]
         #Silicon
-           Borg: [ 1, 2 ]
-        #Centcom      
+           StationAi: [ 1, 1 ]
+           Borg: [ 2, 2 ]
+        #Centcom-Starshine
            BlueShield: [ 1, 1 ]

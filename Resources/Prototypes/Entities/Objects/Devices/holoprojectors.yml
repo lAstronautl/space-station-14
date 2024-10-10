@@ -12,6 +12,8 @@
   - type: ContainerContainer
     containers:
       cell_slot: !type:ContainerSlot {}
+  - type: PowerCellDraw
+    enabled: false
   - type: PowerCellSlot
     cellSlotId: cell_slot
   - type: ItemSlots
@@ -41,8 +43,6 @@
   id: HoloprojectorBorg
   suffix: borg
   components:
-  - type: HolosignProjector
-    chargeUse: 240
   - type: ItemSlots
     slots:
       cell_slot:
@@ -88,6 +88,7 @@
     - type: HolosignProjector
       signProto: HolosignForcefield
       maxSigns: 6
+      drawRatePerHolo: 2
     - type: Sprite
       sprite: Objects/Devices/Holoprojectors/field.rsi
       state: icon

@@ -51,3 +51,14 @@
     sprite: Clothing/OuterClothing/Coats/insp_coat.rsi
   - type: Clothing
     sprite: Clothing/OuterClothing/Coats/insp_coat.rsi
+
+- type: entity
+  parent: ClothingOuterStorageBase
+  id: ClothingOuterCoatBrigmedicWB
+  name: brigmedic windbreaker
+  description: A brigmedic's trusty windbreaker, for all the space wind.
+  components:
+  - type: Sprite
+    sprite: Clothing/OuterClothing/Coats/windbreaker_brigmedic.rsi
+  - type: Clothing
+    sprite: Clothing/OuterClothing/Coats/windbreaker_brigmedic.rsi

@@ -1,0 +1,18 @@
+- type: entity
+  id: XenomorphMigration
+  parent: BaseStationEventShortDelay
+  components:
+  - type: StationEvent
+    earliestStart: 30
+    startAnnouncement: station-event-vent-creatures-start-announcement
+    startAudio: # Starshine
+      path: /Audio/Starshine/Announcements/lifesigns.ogg
+      params:
+        volume: -4
+    weight: 6
+    minimumPlayers: 15
+    duration: 60
+  - type: VentCrittersRule
+    specialEntries:
+    - id: SpawnPointGhostXenoHunter
+      prob: 0.00001

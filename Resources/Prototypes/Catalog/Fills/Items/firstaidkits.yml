@@ -71,7 +71,7 @@
     contents:
       - id: SyringePhalanximine
       - id: RadAutoInjector
-      - id: EmergencyMedipen
+      - id: PillCanisterPotassiumIodide
       - id: PillCanisterHyronalin
 
 - type: entity
@@ -95,8 +95,10 @@
     contents:
       - id: MedicatedSuture
       - id: RegenerativeMesh
-      - id: Bloodpack
-      - id: InjectorCaseNOMedic
+      - id: SyringeEphedrine
+      - id: SyringeSaline
+      - id: BruteAutoInjector
+      - id: BurnAutoInjector
 
 - type: entity
   id: StimkitFilled

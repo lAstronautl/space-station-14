@@ -1,0 +1,65 @@
+#CentCom Interns
+- type: job
+  id: CentralCommandIntern
+  name: job-name-centcommintern
+  description: job-description-centcommintern
+  playTimeTracker: JobCentralCommandIntern
+  setPreference: false
+  startingGear: CentcomInternGear
+  icon: "JobIconNanotrasen"
+  supervisors: job-supervisors-centcom
+  canBeAntag: false
+  accessGroups:
+  - AllAccess
+  access:
+  - CentralCommand
+
+- type: startingGear
+  id: CentcomInternGear
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitCentcomIntern
+    back: ClothingBackpackSatchelCentcom
+    eyes: ClothingEyesGlassesSunglasses
+    ears: ClothingHeadsetAltCentCom
+    shoes: ClothingShoesColorBlack
+    id: CentcomInternPDA
+    belt: Baton
+  storage:
+    back:
+    - BoxSurvival
+    - Handcuffs
+
+- type: job
+  id: CentralCommandInternLeader
+  name: job-name-centcomminternleader
+  description: job-description-centcomminternleader
+  playTimeTracker: JobCentralCommandInternLeader
+  setPreference: false
+  startingGear: CentcomInternLeaderGear
+  icon: "JobIconNanotrasen"
+  supervisors: job-supervisors-centcom
+  canBeAntag: false
+  accessGroups:
+  - AllAccess
+  access:
+  - CentralCommand
+
+- type: startingGear
+  id: CentcomInternLeaderGear
+  equipment:
+    head: ClothingHeadHatCentcomintern
+    jumpsuit: ClothingUniformJumpsuitCentcomIntern
+    back: ClothingBackpackSatchelCentcom
+    eyes: ClothingEyesGlassesSunglasses
+    ears: ClothingHeadsetAltCentCom
+    outerClothing: ClothingOuterArmorBasicSlim
+    shoes: ClothingShoesColorBlack
+    id: CentcomInternLeaderPDA
+    belt: Stunbaton
+    suitstorage: WeaponSniperMosin
+  storage:
+    back:
+    - BoxSurvival
+    - Handcuffs
+    - SpeedLoaderLightRifle
+    - MagazineBoxLightRifle

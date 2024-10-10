@@ -145,7 +145,7 @@
   targetNode: shell
   category: construction-category-weapons
   objectType: Item
-  description: A homemade shotgun shell that shoots painful glass shrapnel. The spread is so wide that it couldn't hit the broad side of a Barn
+  description: A homemade shotgun shell that shoots painful glass shrapnel. The spread is so wide that it couldn't hit the broad side of a barn.
   icon:
     sprite: Objects/Weapons/Guns/Ammunition/Casings/shotgun_shell.rsi
     state: improvised
@@ -215,41 +215,15 @@
     sprite: Objects/Weapons/Bombs/pipebomb.rsi
     state: icon
 
-## Starshine
-
 - type: construction
-  name: metal pipe craft
-  id: metalpipe
-  graph: MetalPipeGraph
+  name: rolling pin
+  id: rollingpin
+  graph: WoodenRollingPin
   startNode: start
-  targetNode: metalpipe
-  category: construction-category-weapons
+  targetNode: rollingpin
+  category: construction-category-tools
   objectType: Item
-  description: A legendary metal pipe
+  description: A rolling pin, used for cooking and defending the kitchen.
   icon:
-    sprite: Objects/Weapons/Melee/metalpipe.rsi
+    sprite: Objects/Tools/rolling_pin.rsi
     state: icon
-
-- type: construction
-  name: emitter cannon
-  id: emittercannon
-  graph: EmitterCannonGraph
-  startNode: start
-  targetNode: emittercannon
-  category: construction-category-weapons
-  objectType: Item
-  description: An underrated handheld emitter that can be used as a tool as well as a weapon.
-  icon:
-    sprite: Objects/Weapons/Guns/Battery/emitter_cannon.rsi
-    state: icon
-
-- type: construction
-  name: Chainsaw
-  id: chainsaw
-  graph: ChainsawGraph
-  startNode: start
-  targetNode: chainsaw
-  category: construction-category-weapons
-  description: "chainsaw"
-  icon: { sprite: Objects/Weapons/Melee/chainsaw.rsi, state: icon }
-  objectType: Item

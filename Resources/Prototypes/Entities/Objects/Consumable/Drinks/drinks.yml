@@ -38,6 +38,7 @@
     interfaces:
       enum.TransferAmountUiKey.Key:
         type: TransferAmountBoundUserInterface
+  - type: DnaSubstanceTrace
 
 - type: entity
   parent: DrinkBase
@@ -81,6 +82,9 @@
     solution: drink
   - type: FitsInDispenser
     solution: drink
+  - type: Tag
+    tags:
+      - DrinkGlass
 
 # Transformable container - normal glass
 - type: entity
@@ -2141,7 +2145,7 @@
   parent: DrinkGlassBase
   id: DrinkWaterJug
   name: water jug
-  description: Stay hydrated
+  description: Stay hydrated.
   components:
   - type: SolutionContainerManager
     solutions:

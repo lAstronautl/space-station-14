@@ -52,6 +52,9 @@
 - files: ["oasis.yml"]
   authors: CptJeanLuc
 
+- files: ["cog.yml"]
+  authors: Spacemann
+
 ## Starshine
 
 - files: ["metastation.yml"]

@@ -1,15 +1,12 @@
-using System.Globalization;
 using Content.Server.Access.Systems;
 using Content.Server.Administration.Logs;
 using Content.Server.AlertLevel;
 using Content.Server.Chat.Systems;
-using Content.Server.DeviceNetwork;
 using Content.Server.DeviceNetwork.Components;
 using Content.Server.DeviceNetwork.Systems;
 using Content.Server.Interaction;
 using Content.Server.Popups;
 using Content.Server.RoundEnd;
-using Content.Server.Screens;
 using Content.Server.Screens.Components;
 using Content.Server.Shuttles.Systems;
 using Content.Server.Station.Systems;
@@ -22,6 +19,7 @@ using Content.Shared.Communications;
 using Content.Shared.Database;
 using Content.Shared.DeviceNetwork;
 using Content.Shared.Emag.Components;
+using Content.Shared.IdentityManagement;
 using Content.Shared.Popups;
 using Robust.Server.GameObjects;
 using Robust.Shared.Audio;
@@ -32,7 +30,6 @@ namespace Content.Server.Communications
     public sealed class CommunicationsConsoleSystem : EntitySystem
     {
         [Dependency] private readonly AccessReaderSystem _accessReaderSystem = default!;
-        [Dependency] private readonly InteractionSystem _interaction = default!;
         [Dependency] private readonly AlertLevelSystem _alertLevelSystem = default!;
         [Dependency] private readonly ChatSystem _chatSystem = default!;
         [Dependency] private readonly DeviceNetworkSystem _deviceNetworkSystem = default!;
@@ -184,10 +181,6 @@ namespace Content.Server.Communications
 
         private bool CanUse(EntityUid user, EntityUid console)
         {
-            // This shouldn't technically be possible because of BUI but don't trust client.
-            if (!_interaction.InRangeUnobstructed(console, user))
-                return false;
-
             if (TryComp<AccessReaderComponent>(console, out var accessReaderComponent) && !HasComp<EmaggedComponent>(console))
             {
                 return _accessReaderSystem.IsAllowed(user, console, accessReaderComponent);
@@ -258,18 +251,22 @@ namespace Content.Server.Communications
                     return;
                 }
 
+                var tryGetIdentityShortInfoEvent = new TryGetIdentityShortInfoEvent(uid, mob);
+                RaiseLocalEvent(tryGetIdentityShortInfoEvent);
+                author = tryGetIdentityShortInfoEvent.Title;
+
+                // Starshine-Announcements-start
                 if (_idCardSystem.TryFindIdCard(mob, out var id))
                 {
-                    author = $"{id.Comp.FullName} ({CultureInfo.CurrentCulture.TextInfo.ToTitleCase(id.Comp.JobTitle ?? string.Empty)})".Trim();
-
-                    // Starshine-Announcements-start
                     comp.JobSpecialAnnounceDictionary.TryGetValue(id.Comp.JobTitle!, out var jobIdName);
-                    if (TryComp<AccessComponent>(id, out var accessComponent) && accessComponent.Tags.Contains(jobIdName!))
+                    if (TryComp<AccessComponent>(id, out var accessComponent) &&
+                        accessComponent.Tags.Contains(jobIdName!))
                     {
-                        specificAnnouncement = new SoundPathSpecifier($"/Audio/Starshine/Announcements/Console/{jobIdName?.ToLower()}.ogg");
+                        specificAnnouncement =
+                            new SoundPathSpecifier(
+                                $"/Audio/Starshine/Announcements/Console/{jobIdName?.ToLower()}.ogg");
                     }
-                    // Starshine-Announcements-end
-                }
+                } // Starshine-Announcements-end
             }
 
             comp.AnnouncementCooldownRemaining = comp.Delay;

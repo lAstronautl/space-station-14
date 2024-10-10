@@ -15,15 +15,9 @@
 
 - type: playTimeTracker
   id: JobBotanist
-
-- type: playTimeTracker
-  id: JobCentComConsultant
   
 - type: playTimeTracker
   id: JobCaptain
-
-- type: playTimeTracker
-  id: JobBlueShield
 
 - type: playTimeTracker
   id: JobCargoTechnician
@@ -69,6 +63,12 @@
 
 - type: playTimeTracker
   id: JobERTSecurity
+
+- type: playTimeTracker
+  id: JobDeathSquad
+
+- type: playTimeTracker
+  id: JobCBURN
 
 - type: playTimeTracker
   id: JobHeadOfPersonnel
@@ -123,9 +123,6 @@
 
 - type: playTimeTracker
   id: JobSalvageSpecialist
-
-- type: playTimeTracker
-  id: JobMiner
   
 - type: playTimeTracker
   id: JobScientist
@@ -138,6 +135,9 @@
 
 - type: playTimeTracker
   id: JobServiceWorker
+
+- type: playTimeTracker
+  id: JobStationAi
 
 - type: playTimeTracker
   id: JobStationEngineer
@@ -156,6 +156,3 @@
 
 - type: playTimeTracker
   id: JobZookeeper
-
-- type: playTimeTracker
-  id: JobShuttlePilot

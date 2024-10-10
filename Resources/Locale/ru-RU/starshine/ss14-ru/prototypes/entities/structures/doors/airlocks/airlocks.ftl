@@ -1,0 +1,17 @@
+ent-AirlockMiner = { ent-Airlock }
+    .suffix = Шахтеры
+    .desc = { ent-Airlock.desc }
+ent-AirlockCentralCommandV2 = { ent-Airlock }
+    .suffix = ЦентральноеКомандование
+    .desc = { ent-Airlock.desc }
+ent-AirlockCentralCommandHatch = { ent-Airlock }
+    .suffix = ЦентральноеКомандование, Четверной
+ent-AirlockSyndicateNukeopCommand = { ent-Airlock }
+    .desc = { ent-Airlock.desc }
+    .suffix = Оперативники, Командный
+ent-AirlockSyndicateNukeopCommandGlass = { ent-AirlockGlass }
+    .desc = { ent-AirlockGlass.desc }
+    .suffix = Оперативники, Командный
+ent-AirlockMinerGlass = { ent-AirlockGlass }
+    .desc = { ent-AirlockGlass.desc }
+    .suffix = Шахтеры

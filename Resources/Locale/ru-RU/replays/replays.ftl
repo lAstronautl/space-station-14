@@ -10,6 +10,7 @@ replay-loading-failed =
     Не удалось загрузить повтор:
     { $reason }
 replay-loading-retry = Попытка загрузить с большей допустимостью исключений МОЖЕТ ВЫЗВАТЬ БАГИ!
+replay-loading-cancel = Отмена
 # Main Menu
 replay-menu-subtext = Клиент повтора
 replay-menu-load = Загрузить выбранный повтор
@@ -38,3 +39,4 @@ replay-verb-spectate = Наблюдать
 cmd-replay-spectate-help = наблюдать_за_повтором [опциональное энтити]
 cmd-replay-spectate-desc = Прикрепляет или открепляет локального игрока к заданному uid энтити.
 cmd-replay-spectate-hint = Опциональный EntityUid
+cmd-replay-toggleui-desc = Переключение пользовательского интерфейса управления воспроизведением.
